@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    font-family: Tahoma;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background: no-repeat url(../image/background.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .pda_empty {
+        background: no-repeat url(../image/pda_empty.png);
+        background-position: center;
+        background-size: contain;
+        height: 48%;
+        width: 80%;
+
+        .main {
+            height: 100%;
+            width: 100%;
+            padding: 163px 111px 156px 87px;
+            display: flex;
+            flex-direction: column;
+            
+            .main_top {
+                height: calc(100% - 25px);
+                width: 100%;
+            }
+
+            .main_bottom {
+                height: 25px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+text {
+    position: absolute;
+}
+
+.white {
+    color: white;
+}
+
+.gray {
+    
+}
+
+.light_gray {
+
+}
+
+.yellow {
+    
+}
+
+.green {
+    
+}
+
+.size_1 {
+    font-size: 120%;
+}
+
+.size_2 {
+    font-size: 100%;
+}
+
+.size_3 {
+    font-size: 80%;
+}
+
+.time_bottom {
+    left: 67%;
+    top: 78.5%;
+}
+
+.task {
+    left: 21%;
+    top: 21.5%;
+}
