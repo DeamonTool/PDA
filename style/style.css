@@ -1,0 +1,60 @@
+.background {
+    background: no-repeat center/100% url(../image/background.jpg);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.pda_empty {
+    background: no-repeat center/80% url(../image/pda_empty.png);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+text {
+    font-family: Tahoma;
+    position: absolute;
+}
+
+.white {
+    color: white;
+}
+
+.gray {
+    
+}
+
+.light_gray {
+
+}
+
+.yellow {
+    
+}
+
+.green {
+    
+}
+
+.size_1 {
+    font-size: 120%;
+}
+
+.size_2 {
+    font-size: 100%;
+}
+
+.size_3 {
+    font-size: 80%;
+}
+
+.time_bottom {
+    left: 67%;
+    top: 78.5%;
+}
+
+.task {
+    left: 21%;
+    top: 21.5%;
+}
