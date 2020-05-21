@@ -1,11 +1,16 @@
-* {
+*, ::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 html, body {
   margin: 0;
-  font-family: Tahoma;
+  font-family: "Roboto";
+}
+
+html, body, ul, ol, li, p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
 }
 
 section {
@@ -27,7 +32,7 @@ section {
 
 section .pda_empty {
   position: relative;
-  width: 80%;
+  width: 90%;
   height: auto;
 }
 
@@ -44,7 +49,7 @@ section .pda_empty .main {
   left: 0;
   height: 100%;
   width: 100%;
-  padding: 163px 111px 156px 87px;
+  padding: 8.3% 15% 8% 11.4%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,42 +60,99 @@ section .pda_empty .main {
 }
 
 section .pda_empty .main .main_top {
-  height: calc(100% - 25px);
+  height: 95%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section .pda_empty .main .main_top .main_left {
+  height: 100%;
+  width: 52%;
+}
+
+section .pda_empty .main .main_top .main_left .main_left_topic {
+  height: 6%;
+  width: 100%;
+}
+
+section .pda_empty .main .main_top .main_left .main_left_topic .main_left_topic_name {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  margin-left: 4.5%;
+  margin-top: 1%;
+}
+
+section .pda_empty .main .main_top .main_rigth {
+  height: 100%;
+  width: 66%;
 }
 
 section .pda_empty .main .main_bottom {
-  height: 25px;
+  height: 5%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-text {
-  position: absolute;
+section .pda_empty .main .main_bottom ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 0;
+  margin-left: 1.5%;
 }
 
-.white {
+section .pda_empty .main .main_bottom ul li {
+  font-size: 14px;
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+section .pda_empty .main .main_bottom ul li:hover {
   color: white;
 }
 
-.size_1 {
-  font-size: 120%;
+section .pda_empty .main .main_bottom ul li::before {
+  content: "";
+  display: block;
+  height: 13px;
+  width: 13px;
+  margin-right: 3px;
+  background: no-repeat url(../image/icon_list_off.png);
 }
 
-.size_2 {
-  font-size: 100%;
+section .pda_empty .main .main_bottom ul li:not(:first-child) {
+  margin-left: 0.2%;
 }
 
-.size_3 {
-  font-size: 80%;
-}
-
-.time_bottom {
-  left: 67%;
-  top: 78.5%;
-}
-
-.task {
-  left: 21%;
-  top: 21.5%;
+section .pda_empty .main .main_bottom .time_bottom {
+  font-size: 14px;
+  color: white;
+  margin-right: 7.8%;
+  margin-top: 0.5%;
 }
 /*# sourceMappingURL=style.css.map */

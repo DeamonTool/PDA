@@ -5,31 +5,44 @@
 <head>
     <title>PDA</title>
 
-    <link rel = "shortcut icon" href = "image/icon.png">
+    <link rel = "shortcut icon" href = "image/icon_web.png">
     <link rel = "stylesheet" href = "style/style.css">
+    <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap">
 </head>
 
 <body>
-    <!-- <div class = "background"></div>
-    <div class = "pda_empty"></div>
-
-    <text class = "white size_1 task">Задания</text>
-    <text class = "white size_3 time_bottom" id = "data_time"></text> -->
-
     <section>
         <div class = "pda_empty">
-            <img src="/image/pda_empty.png">
+            <img src = "/image/pda_empty.png">
+
             <div class = "main">
                 <div class = "main_top">
-                    <div class = "side_left"></div>
-                    <div class = "side_rigth"></div>
+                    <div class = "main_left">
+                        <div class = "main_left_topic">
+                            <div class = "main_left_topic_name">Задания</div>
+                        </div>
+                    </div>
+
+                    <div class = "main_rigth"></div>
                 </div>
-                <div class = "main_bottom"></div>
+                <div class = "main_bottom">
+                    <ul>
+                        <li>Задачи//</li>
+                        <li>План//</li>
+                        <li>Журнал//</li>
+                        <li>Контакты//</li>
+                        <li>Ранги//</li>
+                        <li>Данные//</li>
+                        <li>Справка</li>
+                    </ul>
+
+                    <div class = "time_bottom" id = "data_time"></div>
+                </div>
             </div>
         </div>
     </section>
         
-    <script src = "java/time.js"></script>
+    <script src = "javascript/time.js"></script>
 </body>
 
 </html>
