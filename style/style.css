@@ -26,14 +26,22 @@ section {
 }
 
 section .pda_empty {
-  background: no-repeat url(../image/pda_empty.png);
-  background-position: center;
-  background-size: contain;
-  height: 48%;
+  position: relative;
   width: 80%;
+  height: auto;
+}
+
+section .pda_empty img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 section .pda_empty .main {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   padding: 163px 111px 156px 87px;

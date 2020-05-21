@@ -18,13 +18,20 @@ section {
     align-items: center;
     
     .pda_empty {
-        background: no-repeat url(../image/pda_empty.png);
-        background-position: center;
-        background-size: contain;
-        height: 48%;
+        position: relative;
         width: 80%;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
 
         .main {
+            position: absolute;
+            top: 0;
+            left: 0;
             height: 100%;
             width: 100%;
             padding: 163px 111px 156px 87px;
