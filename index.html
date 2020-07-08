@@ -7,7 +7,7 @@
 
     <meta charset="utf-8">
 
-    <link rel="shortcut icon" href="image/icon_web.png">
+    <link rel="shortcut icon" href="image/web.png">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap">
 </head>
@@ -17,13 +17,26 @@
         <div class="pda_empty">
             <img src="./image/pda_empty.png">
             <div class="main">
-                <div class="interactive_bar"></div>
-                <div class="navigation_bar"></div>
+                <div class="bar_interactive"></div>
+
+                <div class="main_menu">
+                    <ul id="main_menu_list">
+                        <li onclick="mainMenuNotice(0)">Задачи</li><p>//</p>
+                        <li onclick="mainMenuNotice(1)">План</li><p>//</p>
+                        <li onclick="mainMenuNotice(2)" class="notice_active" >Журнал</li><p>//</p>
+                        <li onclick="mainMenuNotice(3)">Контакты</li><p>//</p>
+                        <li onclick="mainMenuNotice(4)">Ранги</li><p>//</p>
+                        <li onclick="mainMenuNotice(5)" class="notice_active" >Данные</li><p>//</p>
+                        <li onclick="mainMenuNotice(6)" class="notice_active" >Справка</li>
+                    </ul>
+                    <div class="date_time"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <script src="javascript/time.js"></script>
+    <script src="javascript/main_menu.js"></script>
 </body>
 
 </html>
