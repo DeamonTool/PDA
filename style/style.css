@@ -131,6 +131,10 @@ section .pda_empty .main .bar .bar_left .bar_left_title .bar_left_title_img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: no-repeat url(../image/bar_left_title_load.gif);
+  background-position: center;
+  background-size: 60%;
+  margin-left: 8%;
 }
 
 section .pda_empty .main .bar .bar_left .bar_left_menu {
