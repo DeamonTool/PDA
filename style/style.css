@@ -65,7 +65,7 @@ section .pda_empty .main {
           flex-direction: column;
 }
 
-section .pda_empty .main .bar_interactive {
+section .pda_empty .main .bar {
   height: 95%;
   width: 100%;
   display: -webkit-box;
@@ -75,6 +75,97 @@ section .pda_empty .main .bar_interactive {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+section .pda_empty .main .bar .bar_left {
+  height: 100%;
+  width: 47%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .pda_empty .main .bar .bar_left .bar_left_title {
+  height: 6%;
+  width: 93%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section .pda_empty .main .bar .bar_left .bar_left_menu {
+  height: 89.5%;
+  width: 93%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section .pda_empty .main .bar .bar_left .bar_left_menu .bar_left_menu_info {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section .pda_empty .main .bar .bar_left .bar_left_menu ul {
+  list-style-type: none;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 28.3%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  width: 23.5%;
+}
+
+section .pda_empty .main .bar .bar_left .bar_left_menu ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: 0.95vw;
+  color: #646464;
+}
+
+section .pda_empty .main .bar .bar_left .bar_left_menu ul li:hover {
+  color: #d2d2d2;
+}
+
+section .pda_empty .main .bar .bar_left .bar_left_menu ul li:not(:first-child) {
+  margin-left: 8.5%;
+}
+
+section .pda_empty .main .bar .bar_right {
+  height: 100%;
+  width: 53%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 section .pda_empty .main .main_menu {
@@ -110,7 +201,7 @@ section .pda_empty .main .main_menu ul li {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.95vw;
   color: #646464;
 }
 
@@ -120,10 +211,9 @@ section .pda_empty .main .main_menu ul li:hover {
 
 section .pda_empty .main .main_menu ul li::before {
   content: "";
-  display: block;
   height: 13px;
   width: 13px;
-  margin-right: 3px;
+  margin-right: 0.1vw;
   background: no-repeat url(../image/main_menu_list_inactive.png);
 }
 
@@ -132,11 +222,11 @@ section .pda_empty .main .main_menu ul .notice_active::before {
 }
 
 section .pda_empty .main .main_menu ul li:not(:first-child) {
-  margin-left: 0.2%;
+  margin-left: -0.1%;
 }
 
 section .pda_empty .main .main_menu ul p {
-  font-size: 14px;
+  font-size: 0.95vw;
   color: #646464;
 }
 
@@ -153,8 +243,8 @@ section .pda_empty .main .main_menu .date_time {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 0.3%;
-  font-size: 14px;
+  margin-left: 0.3%;
+  font-size: 0.95vw;
   color: #d2d2d2;
 }
 /*# sourceMappingURL=style.css.map */
