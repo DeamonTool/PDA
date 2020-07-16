@@ -19,15 +19,19 @@
             <div class="main">
                 <div class="bar">
                     <div class="bar_left">
-                        <div class="bar_left_title"></div>
+                        <div class="bar_left_title">
+                            <div class="bar_left_title_text">Задания</div>
+
+                            <div class="bar_left_title_img"></div>
+                        </div>
 
                         <div class="bar_left_menu">
                             <div class="bar_left_menu_info"></div>
 
                             <ul id="bar_left_menu_list">
-                                <li onclick="barLeftMenuNotice(0)">Активные</li>
-                                <li onclick="barLeftMenuNotice(1)">Выполненные</li>
-                                <li onclick="barLeftMenuNotice(2)">Проваленные</li>
+                                <li onclick="barLeftMenuSwitch(0)" style="color: rgb(230, 160, 0)">Активные</li>
+                                <li onclick="barLeftMenuSwitch(1)">Выполненные</li>
+                                <li onclick="barLeftMenuSwitch(2)">Проваленные</li>
                             </ul>
                         </div>
                     </div>
@@ -37,19 +41,19 @@
                     
                 <div class="main_menu">
                     <ul id="main_menu_list">
-                        <li onclick="mainMenuNotice(0)">Задачи</li>
+                        <li onclick="mainMenuSwitch(0)" style="color: rgb(230, 160, 0)">Задачи</li>
                         <p>//</p>
-                        <li onclick="mainMenuNotice(1)">План</li>
+                        <li onclick="mainMenuSwitch(1)">План</li>
                         <p>//</p>
-                        <li onclick="mainMenuNotice(2)" class="notice_active">Журнал</li>
+                        <li onclick="mainMenuSwitch(2)" class="notice_active">Журнал</li>
                         <p>//</p>
-                        <li onclick="mainMenuNotice(3)">Контакты</li>
+                        <li onclick="mainMenuSwitch(3)">Контакты</li>
                         <p>//</p>
-                        <li onclick="mainMenuNotice(4)">Ранги</li>
+                        <li onclick="mainMenuSwitch(4)">Ранги</li>
                         <p>//</p>
-                        <li onclick="mainMenuNotice(5)" class="notice_active">Данные</li>
+                        <li onclick="mainMenuSwitch(5)" class="notice_active">Данные</li>
                         <p>//</p>
-                        <li onclick="mainMenuNotice(6)" class="notice_active">Справка</li>
+                        <li onclick="mainMenuSwitch(6)" class="notice_active">Справка</li>
                     </ul>
 
                     <div class="date_time"></div>
@@ -58,8 +62,8 @@
         </div>
     </section>
 
-    <script src="javascript/time.js"></script>
-    <script src="javascript/main_menu.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/main_tasks.js"></script>
 </body>
 
 </html>
