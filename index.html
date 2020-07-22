@@ -17,28 +17,40 @@
         <div class="pda_empty">
             <img src="./image/pda_empty.png">
             <div class="main">
-                <div class="bar">
-                    <div class="bar_left">
-                        <div class="bar_left_title">
-                            <div class="bar_left_title_text">Задания</div>
+                <div class="tasks">
+                    <div class="tasks_left">
+                        <div class="tasks_left_title">
+                            <div class="tasks_left_title_text">Задания</div>
 
-                            <div class="bar_left_title_img"></div>
+                            <div class="tasks_left_title_img"></div>
                         </div>
 
-                        <div class="bar_left_menu">
-                            <div class="bar_left_menu_info"></div>
+                        <div class="tasks_left_menu">
+                            <div class="tasks_left_menu_active">
+                                <ul id="test">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
 
-                            <ul id="bar_left_menu_list">
-                                <li onclick="barLeftMenuSwitch(0)" style="color: rgb(230, 160, 0)">Активные</li>
-                                <li onclick="barLeftMenuSwitch(1)">Выполненные</li>
-                                <li onclick="barLeftMenuSwitch(2)">Проваленные</li>
+                            <div class="tasks_left_menu_completed" style="display: none"></div>
+
+                            <div class="tasks_left_menu_failed" style="display: none"></div>
+
+                            <ul id="tasks_left_menu_list">
+                                <li onclick="tasksLeftMenuSwitch(0)" style="color: rgb(230, 160, 0)">Активные</li>
+                                <li onclick="tasksLeftMenuSwitch(1)">Выполненные</li>
+                                <li onclick="tasksLeftMenuSwitch(2)">Проваленные</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bar_right"></div>
+                    <div class="tasks_right"></div>
                 </div>
-                    
+
                 <div class="main_menu">
                     <ul id="main_menu_list">
                         <li onclick="mainMenuSwitch(0)" style="color: rgb(230, 160, 0)">Задачи</li>

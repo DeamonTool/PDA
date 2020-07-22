@@ -11,6 +11,52 @@ $size_3: 12px;
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    height: 1.5vw;
+    width: 1.5vw;
+    background-color: rgb(34, 33, 38);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(61, 61, 73);
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background:
+        linear-gradient(0deg, rgb(20, 20, 24) 10%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(135deg, rgb(61, 61, 73) 42%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(225deg, rgb(61, 61, 73) 42%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(0deg, rgb(61, 61, 73) 40%, rgba(0, 0, 0, 0) 0);
+    background-color: rgb(48, 50, 62);
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background:
+        linear-gradient(180deg, rgb(20, 20, 24) 10%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(315deg, rgb(61, 61, 73) 42%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(45deg, rgb(61, 61, 73) 42%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(180deg, rgb(61, 61, 73) 40%, rgba(0, 0, 0, 0) 0);
+    background-color: rgb(48, 50, 62);
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background:
+        linear-gradient(270deg, rgb(20, 20, 24) 10%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(45deg, rgb(61, 61, 73) 42%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(135deg, rgb(61, 61, 73) 42%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(270deg, rgb(61, 61, 73) 40%, rgba(0, 0, 0, 0) 0);
+    background-color: rgb(48, 50, 62);
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background:
+        linear-gradient(90deg, rgb(20, 20, 24) 10%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(225deg, rgb(61, 61, 73) 42%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(315deg, rgb(61, 61, 73) 42%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(90deg, rgb(61, 61, 73) 40%, rgba(0, 0, 0, 0) 0);
+    background-color: rgb(48, 50, 62);
+}
+
 html {
     font-family: "Roboto";
 }
@@ -30,9 +76,7 @@ p {
 section {
     height: 100vh;
     width: 100%;
-    background-position: center;
-    background: no-repeat url(../image/background.jpg);
-    background-size: cover;
+    background: no-repeat center/cover url(../image/background.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,25 +102,25 @@ section {
             display: flex;
             flex-direction: column;
 
-            .bar {
+            .tasks {
                 height: 95%;
                 width: 100%;
                 display: flex;
                 flex-direction: row;
 
-                .bar_left {
+                .tasks_left {
                     height: 100%;
                     width: 47%;
                     display: flex;
                     flex-direction: column;
 
-                    .bar_left_title {
+                    .tasks_left_title {
                         height: 6%;
                         width: 93%;
                         display: flex;
                         flex-direction: row;
 
-                        .bar_left_title_text {
+                        .tasks_left_title_text {
                             height: 100%;
                             width: 86%;
                             display: flex;
@@ -89,39 +133,76 @@ section {
                             font-weight: 500;
                         }
 
-                        .bar_left_title_img {
+                        .tasks_left_title_img {
                             height: 100%;
                             width: 14%;
                             display: flex;
                             flex-direction: column;
-                            background: no-repeat url(../image/bar_left_title_load.gif);
-                            background-position: center;
-                            background-size: 60%;
+                            background: no-repeat center/60% url(../image/tasks_left_title_load.gif);
                             margin-left: 8%;
                         }
                     }
 
-                    .bar_left_menu {
-                        height: 89.5%;
+                    .tasks_left_menu {
+                        height: 88%;
                         width: 93%;
                         display: flex;
                         flex-direction: row;
+                        position: relative;
+                        margin-top: 1.5%;
 
-                        .bar_left_menu_info {
+                        .tasks_left_menu_active {
+                            height: 97.5%;
+                            width: 99.8%;
+                            display: flex;
+                            position: absolute;
+                            overflow-y: scroll;
+                            margin-top: 0.5%;
+
+                            ul {
+                                height: 100%;
+                                width: 100%;
+                                list-style-type: none;
+                                justify-content: center;
+                                align-items: center;
+                                display: block;
+            
+                                li {
+                                    height: 30vh;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: $size_1;
+                                    color: $color_orange;
+                                }
+
+                                li:not(:first-child) {
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+
+                        .tasks_left_menu_completed {
                             height: 100%;
                             width: 100%;
                             display: flex;
-                            flex-direction: row;
+                            position: absolute;
+                        }
+
+                        .tasks_left_menu_failed {
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            position: absolute;
                         }
 
                         ul {
+                            height: 100%;
+                            width: 86%;
                             list-style-type: none;
-                            position: fixed;
+                            position: absolute;
                             display: flex;
-                            margin-top: 28.3%;
                             justify-content: center;
-                            height: auto;
-                            width: 23.5%;
+                            align-items: flex-end;
         
                             li {
                                 align-items: center;
@@ -141,7 +222,7 @@ section {
                     }
                 }
 
-                .bar_right {
+                .tasks_right {
                     height: 100%;
                     width: 53%;
                     display: flex;
@@ -176,6 +257,7 @@ section {
 
                         &::before {
                             content: "";
+                            display: flex;
                             height: 13px;
                             width: 13px;
                             margin-right: 0.1vw;

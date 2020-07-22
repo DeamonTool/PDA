@@ -3,6 +3,36 @@
           box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  height: 1.5vw;
+  width: 1.5vw;
+  background-color: #222126;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d3d49;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  background: linear-gradient(0deg, #141418 10%, rgba(0, 0, 0, 0) 0), linear-gradient(135deg, #3d3d49 42%, rgba(0, 0, 0, 0) 0), linear-gradient(225deg, #3d3d49 42%, rgba(0, 0, 0, 0) 0), linear-gradient(0deg, #3d3d49 40%, rgba(0, 0, 0, 0) 0);
+  background-color: #30323e;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  background: linear-gradient(180deg, #141418 10%, rgba(0, 0, 0, 0) 0), linear-gradient(315deg, #3d3d49 42%, rgba(0, 0, 0, 0) 0), linear-gradient(45deg, #3d3d49 42%, rgba(0, 0, 0, 0) 0), linear-gradient(180deg, #3d3d49 40%, rgba(0, 0, 0, 0) 0);
+  background-color: #30323e;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+  background: linear-gradient(270deg, #141418 10%, rgba(0, 0, 0, 0) 0), linear-gradient(45deg, #3d3d49 42%, rgba(0, 0, 0, 0) 0), linear-gradient(135deg, #3d3d49 42%, rgba(0, 0, 0, 0) 0), linear-gradient(270deg, #3d3d49 40%, rgba(0, 0, 0, 0) 0);
+  background-color: #30323e;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+  background: linear-gradient(90deg, #141418 10%, rgba(0, 0, 0, 0) 0), linear-gradient(225deg, #3d3d49 42%, rgba(0, 0, 0, 0) 0), linear-gradient(315deg, #3d3d49 42%, rgba(0, 0, 0, 0) 0), linear-gradient(90deg, #3d3d49 40%, rgba(0, 0, 0, 0) 0);
+  background-color: #30323e;
+}
+
 html {
   font-family: "Roboto";
 }
@@ -22,9 +52,7 @@ p {
 section {
   height: 100vh;
   width: 100%;
-  background-position: center;
-  background: no-repeat url(../image/background.jpg);
-  background-size: cover;
+  background: no-repeat center/cover url(../image/background.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +93,7 @@ section .pda_empty .main {
           flex-direction: column;
 }
 
-section .pda_empty .main .bar {
+section .pda_empty .main .tasks {
   height: 95%;
   width: 100%;
   display: -webkit-box;
@@ -77,7 +105,7 @@ section .pda_empty .main .bar {
           flex-direction: row;
 }
 
-section .pda_empty .main .bar .bar_left {
+section .pda_empty .main .tasks .tasks_left {
   height: 100%;
   width: 47%;
   display: -webkit-box;
@@ -89,7 +117,7 @@ section .pda_empty .main .bar .bar_left {
           flex-direction: column;
 }
 
-section .pda_empty .main .bar .bar_left .bar_left_title {
+section .pda_empty .main .tasks .tasks_left .tasks_left_title {
   height: 6%;
   width: 93%;
   display: -webkit-box;
@@ -101,7 +129,7 @@ section .pda_empty .main .bar .bar_left .bar_left_title {
           flex-direction: row;
 }
 
-section .pda_empty .main .bar .bar_left .bar_left_title .bar_left_title_text {
+section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_text {
   height: 100%;
   width: 86%;
   display: -webkit-box;
@@ -121,7 +149,7 @@ section .pda_empty .main .bar .bar_left .bar_left_title .bar_left_title_text {
   font-weight: 500;
 }
 
-section .pda_empty .main .bar .bar_left .bar_left_title .bar_left_title_img {
+section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_img {
   height: 100%;
   width: 14%;
   display: -webkit-box;
@@ -131,14 +159,12 @@ section .pda_empty .main .bar .bar_left .bar_left_title .bar_left_title_img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: no-repeat url(../image/bar_left_title_load.gif);
-  background-position: center;
-  background-size: 60%;
+  background: no-repeat center/60% url(../image/tasks_left_title_load.gif);
   margin-left: 8%;
 }
 
-section .pda_empty .main .bar .bar_left .bar_left_menu {
-  height: 89.5%;
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu {
+  height: 88%;
   width: 93%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,35 +173,85 @@ section .pda_empty .main .bar .bar_left .bar_left_menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  position: relative;
+  margin-top: 1.5%;
 }
 
-section .pda_empty .main .bar .bar_left .bar_left_menu .bar_left_menu_info {
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active {
+  height: 97.5%;
+  width: 99.8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  overflow-y: scroll;
+  margin-top: 0.5%;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active ul {
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: block;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active ul li {
+  height: 30vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.25vw;
+  color: #e6a000;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active ul li:not(:first-child) {
+  margin-left: 0;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed {
   height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  position: absolute;
 }
 
-section .pda_empty .main .bar .bar_left .bar_left_menu ul {
-  list-style-type: none;
-  position: fixed;
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed {
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 28.3%;
+  position: absolute;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu ul {
+  height: 100%;
+  width: 86%;
+  list-style-type: none;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: auto;
-  width: 23.5%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-section .pda_empty .main .bar .bar_left .bar_left_menu ul li {
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -184,15 +260,15 @@ section .pda_empty .main .bar .bar_left .bar_left_menu ul li {
   color: #646464;
 }
 
-section .pda_empty .main .bar .bar_left .bar_left_menu ul li:hover {
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu ul li:hover {
   color: #d2d2d2;
 }
 
-section .pda_empty .main .bar .bar_left .bar_left_menu ul li:not(:first-child) {
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu ul li:not(:first-child) {
   margin-left: 8.5%;
 }
 
-section .pda_empty .main .bar .bar_right {
+section .pda_empty .main .tasks .tasks_right {
   height: 100%;
   width: 53%;
   display: -webkit-box;
@@ -247,6 +323,9 @@ section .pda_empty .main .main_menu ul li:hover {
 
 section .pda_empty .main .main_menu ul li::before {
   content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 13px;
   width: 13px;
   margin-right: 0.1vw;
