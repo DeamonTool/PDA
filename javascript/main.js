@@ -2,13 +2,8 @@ formatTrue = value => { return value < 10 ? value = '0' + value : value }
 
 function dateTime() {
     let date = new Date()
-    let minutes = formatTrue(date.getMinutes())
-    let hours = formatTrue(date.getHours())
-    let day = formatTrue(date.getDate())
-    let month = formatTrue(date.getMonth() + 1)
-    let year = date.getFullYear()
 
-    return `${hours}:${minutes} ${day}/${month}/${year}`
+    return `${formatTrue(date.getHours())}:${formatTrue(date.getMinutes())}`
 }
 
 function mainMenuSwitch(index) {
@@ -19,4 +14,7 @@ function mainMenuSwitch(index) {
     if (list[index].classList.length) list[index].classList.toggle("notice_active")
 }
 
-setInterval(() => document.getElementsByClassName("date_time")[0].innerHTML = dateTime(), 1000)
+let date = new Date()
+let day_month_year = ` ${formatTrue(date.getDate())}/${formatTrue(date.getMonth() + 1)}/${date.getFullYear()}`
+
+setInterval(() => document.getElementsByTagName("time")[0].innerHTML = dateTime() + day_month_year, 1000)
