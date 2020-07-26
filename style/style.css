@@ -33,20 +33,13 @@
   background-color: #30323e;
 }
 
-html {
+html, body {
   font-family: "Roboto";
 }
 
-body, ul, li, p, h1 {
+body, ul, li {
   margin: 0;
   padding: 0;
-}
-
-p {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
 }
 
 section {
@@ -60,7 +53,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: no-repeat center/cover url(../image/background.jpg);
+  background: center/cover no-repeat url(../image/background.jpg);
 }
 
 section .pda_empty {
@@ -77,7 +70,7 @@ section .pda_empty img {
 section .pda_empty .main {
   height: 100%;
   width: 100%;
-  padding: 8.3% 15% 8% 11.4%;
+  padding: 7.3% 14.4% 8.5% 10.6%;
   top: 0;
   left: 0;
   display: -webkit-box;
@@ -91,18 +84,20 @@ section .pda_empty .main {
 }
 
 section .pda_empty .main .tasks {
-  height: 95%;
+  height: 94%;
+  margin-top: -0.2%;
+  padding-bottom: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  background: top/contain no-repeat url(../image/tasks.png);
 }
 
 section .pda_empty .main .tasks .tasks_left {
   width: 47%;
+  margin-top: 1.9%;
+  padding-right: 3%;
+  padding-left: 1.4%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,25 +109,26 @@ section .pda_empty .main .tasks .tasks_left {
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_title {
   height: 6%;
-  width: 93%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_text {
-  padding-top: 1.5%;
-  padding-left: 5%;
+  padding-top: 1%;
+  padding-left: 4.4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.25vw;
   font-weight: 500;
   color: #d2d2d2;
@@ -140,49 +136,42 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_image {
   width: 13%;
+  margin-bottom: 1%;
   background: no-repeat center/60% url(../image/tasks_left_title_load.gif);
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu {
-  height: 88%;
-  width: 93%;
-  margin-top: 1.5%;
+  height: 93%;
+  margin-top: 2%;
+  margin-right: 0.2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   position: relative;
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active {
-  height: 97.5%;
-  width: 99.8%;
-  margin-top: 0.5%;
+  width: 100%;
+  margin-bottom: 0.6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
   overflow-y: scroll;
 }
 
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active ul {
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list {
   height: 100%;
   width: 100%;
   list-style-type: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: block;
 }
 
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active ul li {
-  height: 30vh;
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list li {
+  width: auto;
+  margin: 5% 5% 7% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -190,64 +179,65 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_ac
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.25vw;
-  color: #e6a000;
-}
-
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active ul li:not(:first-child) {
-  margin-left: 0;
+  color: #7d7d8c;
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed {
-  height: 100%;
+  width: 100%;
+  margin-bottom: 0.6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  overflow-y: scroll;
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed {
-  height: 100%;
+  width: 100%;
+  margin-bottom: 0.6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  overflow-y: scroll;
 }
 
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu ul {
-  height: 100%;
-  width: 86%;
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_list {
+  height: 12%;
+  width: 90%;
+  bottom: 0;
+  margin-left: 1.5%;
+  padding-bottom: 1.5%;
+  padding-right: 10%;
+  padding-left: 2%;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(82%, #111313), color-stop(0, rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, color-stop(85%, #222424), color-stop(0, rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #111313 82%, rgba(0, 0, 0, 0) 0), linear-gradient(0deg, #222424 85%, rgba(0, 0, 0, 0) 0);
+  background-color: #111313;
 }
 
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu ul li {
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_list li {
   cursor: pointer;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 0.95vw;
+  font-size: 0.94vw;
   color: #646464;
 }
 
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu ul li:hover {
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_list li:hover {
   color: #d2d2d2;
-}
-
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu ul li:not(:first-child) {
-  margin-left: 8.5%;
 }
 
 section .pda_empty .main .tasks .tasks_right {
   width: 53%;
+  margin-top: 1.9%;
+  padding-right: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,7 +248,8 @@ section .pda_empty .main .tasks .tasks_right {
 }
 
 section .pda_empty .main .main_menu {
-  height: 5%;
+  height: 6%;
+  padding-top: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,8 +259,7 @@ section .pda_empty .main .main_menu {
 }
 
 section .pda_empty .main .main_menu ul {
-  padding-left: 1.5%;
-  padding-bottom: 0.5%;
+  padding-left: 2.6%;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,7 +277,7 @@ section .pda_empty .main .main_menu ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.95vw;
+  font-size: 0.94vw;
   color: #646464;
 }
 
@@ -297,32 +287,37 @@ section .pda_empty .main .main_menu ul li:hover {
 
 section .pda_empty .main .main_menu ul li::before {
   content: "";
-  height: 13px;
-  width: 13px;
-  margin-right: 0.1vw;
-  background: no-repeat url(../image/main_menu_list_inactive.png);
+  height: 1.6vh;
+  width: 0.83vw;
+  margin-right: 0.2vw;
+  background: center/contain no-repeat url(../image/main_menu_list_inactive.png);
 }
 
 section .pda_empty .main .main_menu ul .notice_active::before {
-  background: no-repeat url(../image/main_menu_list_active.png);
+  background: center/contain no-repeat url(../image/main_menu_list_active.png);
 }
 
 section .pda_empty .main .main_menu ul li:not(:first-child) {
   margin-left: -0.1%;
 }
 
-section .pda_empty .main .main_menu ul p {
-  font-size: 0.95vw;
+section .pda_empty .main .main_menu ul li:not(:last-child)::after {
+  content: "//";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 0.94vw;
   color: #646464;
 }
 
 section .pda_empty .main .main_menu time {
   padding-top: 0.1%;
-  padding-right: 7.2%;
+  padding-right: 8%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.95vw;
+  font-size: 0.94vw;
   color: #d2d2d2;
 }
 /*# sourceMappingURL=style.css.map */

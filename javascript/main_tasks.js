@@ -9,11 +9,11 @@ function tasksLeftMenuSwitch(index) {
     for (let i = 0; i < 3; i++) {
         if (i == index) {
             list_menu[i].style.color = "rgb(230, 160, 0)"
-            list[i].style = "display: block"
+            list[i][0].style.display = "block"
         }
         else {
             list_menu[i].style.color = ""
-            list[i].style = "display: none"
+            list[i][0].style.display = "none"
         }
     }
 
