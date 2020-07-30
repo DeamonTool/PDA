@@ -249,8 +249,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu {
-  height: 93%;
-  margin-top: 2%;
+  height: 94%;
   margin-right: 0.2%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,7 +259,8 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu {
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active {
   width: 100%;
-  margin-bottom: 2.6%;
+  margin-top: 1.5%;
+  margin-bottom: 2.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,13 +292,15 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_ac
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed {
   width: 100%;
-  margin-bottom: 0.6%;
+  margin-top: 1.5%;
+  margin-bottom: 2.5%;
   overflow-y: scroll;
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed {
   width: 100%;
-  margin-bottom: 0.6%;
+  margin-top: 1.5%;
+  margin-bottom: 2.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,13 +308,11 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_list {
-  height: 12%;
+  height: 11%;
   width: 90%;
   bottom: 0;
   margin-left: 1.5%;
-  padding-bottom: 1.5%;
-  padding-right: 10%;
-  padding-left: 2%;
+  padding: 0 10% 1.5% 2%;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,8 +324,8 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_li
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(82%, #111313), color-stop(0, #00000000)), -webkit-gradient(linear, left bottom, left top, color-stop(85%, #222424), color-stop(0, #00000000));
-  background: linear-gradient(0deg, #111313 82%, #00000000 0), linear-gradient(0deg, #222424 85%, #00000000 0);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(83%, #111313), color-stop(0, #00000000)), -webkit-gradient(linear, left bottom, left top, color-stop(86%, #222424), color-stop(0, #00000000));
+  background: linear-gradient(0deg, #111313 83%, #00000000 0), linear-gradient(0deg, #222424 86%, #00000000 0);
   background-color: #111313;
 }
 
@@ -353,9 +353,9 @@ section .pda_empty .main .tasks .tasks_right {
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu {
-  height: 5%;
+  height: 4%;
   width: 86%;
-  padding-bottom: 1%;
+  padding-top: 0.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -418,7 +418,7 @@ section .pda_empty .main .tasks .tasks_right .tasks_right_menu .minus_3 {
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_map {
   height: 95%;
-  margin-top: 0.4%;
+  margin-top: 0.8%;
   margin-left: 0.5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,7 +502,7 @@ section .pda_empty .main .main_menu ul li:not(:first-child) {
   margin-left: -0.1%;
 }
 
-section .pda_empty .main .main_menu ul .notice_active::before {
+section .pda_empty .main .main_menu ul .notice::before {
   background: center/contain no-repeat url(../image/main_menu_list_active.png);
 }
 
