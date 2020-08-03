@@ -78,60 +78,60 @@
 
 @-webkit-keyframes cursor {
   0% {
-    cursor: url(../image/cursor_1.png), auto;
+    cursor: url(../image/cursor/1.png), auto;
   }
   14% {
-    cursor: url(../image/cursor_2.png), auto;
+    cursor: url(../image/cursor/2.png), auto;
   }
   29% {
-    cursor: url(../image/cursor_3.png), auto;
+    cursor: url(../image/cursor/3.png), auto;
   }
   43% {
-    cursor: url(../image/cursor_4.png), auto;
+    cursor: url(../image/cursor/4.png), auto;
   }
   57% {
-    cursor: url(../image/cursor_5.png), auto;
+    cursor: url(../image/cursor/5.png), auto;
   }
   71% {
-    cursor: url(../image/cursor_6.png), auto;
+    cursor: url(../image/cursor/6.png), auto;
   }
   86% {
-    cursor: url(../image/cursor_7.png), auto;
+    cursor: url(../image/cursor/7.png), auto;
   }
   100% {
-    cursor: url(../image/cursor_8.png), auto;
+    cursor: url(../image/cursor/8.png), auto;
   }
 }
 
 @keyframes cursor {
   0% {
-    cursor: url(../image/cursor_1.png), auto;
+    cursor: url(../image/cursor/1.png), auto;
   }
   14% {
-    cursor: url(../image/cursor_2.png), auto;
+    cursor: url(../image/cursor/2.png), auto;
   }
   29% {
-    cursor: url(../image/cursor_3.png), auto;
+    cursor: url(../image/cursor/3.png), auto;
   }
   43% {
-    cursor: url(../image/cursor_4.png), auto;
+    cursor: url(../image/cursor/4.png), auto;
   }
   57% {
-    cursor: url(../image/cursor_5.png), auto;
+    cursor: url(../image/cursor/5.png), auto;
   }
   71% {
-    cursor: url(../image/cursor_6.png), auto;
+    cursor: url(../image/cursor/6.png), auto;
   }
   86% {
-    cursor: url(../image/cursor_7.png), auto;
+    cursor: url(../image/cursor/7.png), auto;
   }
   100% {
-    cursor: url(../image/cursor_8.png), auto;
+    cursor: url(../image/cursor/8.png), auto;
   }
 }
 
 * {
-  cursor: url(../image/cursor_1.png), auto;
+  cursor: url(../image/cursor/1.png), auto;
   -webkit-animation: cursor 480ms infinite;
   animation: cursor 480ms infinite;
 }
@@ -146,9 +146,13 @@ html, body {
   scrollbar-arrow-color: #ffffff;
 }
 
-body, ul, li {
+body, p, ul, li, ol {
   margin: 0;
   padding: 0;
+}
+
+ul, li, ol {
+  list-style-type: none;
 }
 
 section {
@@ -199,7 +203,7 @@ section .pda_empty .main .tasks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: top/contain no-repeat url(../image/tasks.png);
+  background: top/contain no-repeat url(../image/tasks/tasks.png);
 }
 
 section .pda_empty .main .tasks .tasks_left {
@@ -245,7 +249,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_image {
   width: 13%;
-  background: center/50% no-repeat url(../image/tasks_left_title_load.gif);
+  background: center/50% no-repeat url(../image/tasks/load.gif);
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu {
@@ -257,7 +261,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu {
   position: relative;
 }
 
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active {
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed {
   width: 100%;
   margin-top: 1.5%;
   margin-bottom: 2.5%;
@@ -267,44 +271,116 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_ac
   overflow-y: scroll;
 }
 
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list {
-  height: 100%;
-  width: 100%;
-  list-style-type: none;
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list {
+  height: 91%;
+  width: 93%;
+  margin-top: 3.8%;
+  margin-left: 3%;
   display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list li {
-  width: auto;
-  margin: 5% 5% 7% 5%;
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol {
+  margin-bottom: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 1.25vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .task_title, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .task_title, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .task_title, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .task_title, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .task_title, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .task_title, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .task_title, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title {
+  height: 13%;
+  margin-bottom: 2.8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .task_title img, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .task_title img, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .task_title img, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .task_title img, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .task_title img, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .task_title img, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .task_title img, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title img, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title img {
+  width: 29%;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .task_title .task_title_text, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .task_title .task_title_text, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .task_title .task_title_text, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .task_title .task_title_text, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .task_title .task_title_text, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .task_title .task_title_text, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .task_title .task_title_text, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title .task_title_text, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title .task_title_text {
+  width: 61%;
+  padding-top: 0.4%;
+  padding-left: 0.6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 0.94vw;
+  color: #d2d2d2;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .task_title .task_title_text p, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .task_title .task_title_text p, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .task_title .task_title_text p, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .task_title .task_title_text p, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .task_title .task_title_text p, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .task_title .task_title_text p, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .task_title .task_title_text p, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title .task_title_text p, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title .task_title_text p {
+  margin-top: 2.5%;
+  font-size: 0.76vw;
   color: #7d7d8c;
 }
 
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed {
-  width: 100%;
-  margin-top: 1.5%;
-  margin-bottom: 2.5%;
-  overflow-y: scroll;
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .task_title .task_title_info, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .task_title .task_title_info, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .task_title .task_title_info, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .task_title .task_title_info, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .task_title .task_title_info, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .task_title .task_title_info, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .task_title .task_title_info, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title .task_title_info, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title .task_title_info {
+  width: 10%;
+  margin-bottom: 7.4%;
+  background: center/80% no-repeat url(../image/tasks/info_1.png);
 }
 
-section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed {
-  width: 100%;
-  margin-top: 1.5%;
-  margin-bottom: 2.5%;
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .task_title .task_title_info:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .task_title .task_title_info:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .task_title .task_title_info:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .task_title .task_title_info:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .task_title .task_title_info:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .task_title .task_title_info:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .task_title .task_title_info:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title .task_title_info:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title .task_title_info:hover {
+  background: center/80% no-repeat url(../image/tasks/info_2.png);
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .task_title .info_3, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .task_title .info_3, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .task_title .info_3, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .task_title .info_3, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .task_title .info_3, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .task_title .info_3, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .task_title .info_3, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title .info_3, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title .info_3 {
+  background: center/80% no-repeat url(../image/tasks/info_3.png);
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .task_title .info_3:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .task_title .info_3:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .task_title .info_3:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .task_title .info_3:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .task_title .info_3:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .task_title .info_3:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .task_title .info_3:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title .info_3:hover, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title .info_3:hover {
+  background: center/80% no-repeat url(../image/tasks/info_3.png);
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol li, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol li, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol li, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol li, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol li, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol li, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol li, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol li, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol li {
+  height: 1.14vw;
+  margin-bottom: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-y: scroll;
+  font-size: 0.76vw;
+  color: #646464;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol li::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol li::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol li::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol li::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol li::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol li::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol li::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol li::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol li::before {
+  content: "";
+  height: 1.8vh;
+  width: 0.9vw;
+  margin-right: 2.2%;
+  background: top/contain no-repeat url(../image/tasks/radiobutton_1.png);
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .done, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .done, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .done, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .done, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .done, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .done, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .done, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .done, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .done {
+  color: #7d7d8c;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .done::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .done::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .done::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .done::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .done::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .done::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .done::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .done::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .done::before {
+  background: top/contain no-repeat url(../image/tasks/radiobutton_2.png);
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .fail, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .fail, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .fail, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .fail, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .fail, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .fail, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .fail, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .fail, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .fail {
+  color: #7d7d8c;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .fail::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .fail::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .fail::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .fail::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .fail::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .fail::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .fail::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .fail::before, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .fail::before {
+  background: top/contain no-repeat url(../image/tasks/radiobutton_3.png);
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol:last-child, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol:last-child, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol:last-child, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol:last-child, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol:last-child, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol:last-child, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol:last-child, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol:last-child, section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol:last-child {
+  padding-bottom: 25%;
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_list {
@@ -312,8 +388,9 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_li
   width: 90%;
   bottom: 0;
   margin-left: 1.5%;
-  padding: 0 10% 1.5% 2%;
-  list-style-type: none;
+  padding-bottom: 1.5%;
+  padding-right: 10%;
+  padding-left: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,8 +401,8 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_li
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(83%, #111313), color-stop(0, #00000000)), -webkit-gradient(linear, left bottom, left top, color-stop(86%, #222424), color-stop(0, #00000000));
-  background: linear-gradient(0deg, #111313 83%, #00000000 0), linear-gradient(0deg, #222424 86%, #00000000 0);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(84%, #111313), color-stop(0, #00000000)), -webkit-gradient(linear, left bottom, left top, color-stop(87%, #222424), color-stop(0, #00000000));
+  background: linear-gradient(0deg, #111313 84%, #00000000 0), linear-gradient(0deg, #222424 87%, #00000000 0);
   background-color: #111313;
 }
 
@@ -355,7 +432,6 @@ section .pda_empty .main .tasks .tasks_right {
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu {
   height: 4%;
   width: 86%;
-  padding-top: 0.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,57 +439,75 @@ section .pda_empty .main .tasks .tasks_right .tasks_right_menu {
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_full {
   width: 7%;
-  margin-left: 0.5%;
-  background: center/90% no-repeat url(../image/tasks_right_menu_full_1.png);
+  margin-left: 0.2%;
+  background: center/85% no-repeat url(../image/tasks/full_1.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_full:hover {
-  background: center/90% no-repeat url(../image/tasks_right_menu_full_2.png);
+  background: center/85% no-repeat url(../image/tasks/full_2.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .full_3 {
-  background: center/90% no-repeat url(../image/tasks_right_menu_full_3.png);
+  background: center/85% no-repeat url(../image/tasks/full_3.png);
+}
+
+section .pda_empty .main .tasks .tasks_right .tasks_right_menu .full_3:hover {
+  background: center/85% no-repeat url(../image/tasks/full_3.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_player {
   width: 7%;
-  margin-left: -0.5%;
-  background: center/90% no-repeat url(../image/tasks_right_menu_player_1.png);
+  margin-left: -1%;
+  background: center/85% no-repeat url(../image/tasks/player_1.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_player:hover {
-  background: center/90% no-repeat url(../image/tasks_right_menu_player_2.png);
+  background: center/85% no-repeat url(../image/tasks/player_2.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .player_3 {
-  background: center/90% no-repeat url(../image/tasks_right_menu_player_3.png);
+  background: center/85% no-repeat url(../image/tasks/player_3.png);
+}
+
+section .pda_empty .main .tasks .tasks_right .tasks_right_menu .player_3:hover {
+  background: center/85% no-repeat url(../image/tasks/player_3.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_plus {
   width: 7%;
+  margin-top: 0.1%;
   margin-left: auto;
-  background: center/90% no-repeat url(../image/tasks_right_menu_plus_1.png);
+  background: center/85% no-repeat url(../image/tasks/plus_1.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_plus:hover {
-  background: center/90% no-repeat url(../image/tasks_right_menu_plus_2.png);
+  background: center/85% no-repeat url(../image/tasks/plus_2.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .plus_3 {
-  background: center/90% no-repeat url(../image/tasks_right_menu_plus_3.png);
+  background: center/85% no-repeat url(../image/tasks/plus_3.png);
+}
+
+section .pda_empty .main .tasks .tasks_right .tasks_right_menu .plus_3:hover {
+  background: center/85% no-repeat url(../image/tasks/plus_3.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_minus {
   width: 7%;
-  background: center/90% no-repeat url(../image/tasks_right_menu_minus_1.png);
+  margin-top: 0.1%;
+  background: center/85% no-repeat url(../image/tasks/minus_1.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_minus:hover {
-  background: center/90% no-repeat url(../image/tasks_right_menu_minus_2.png);
+  background: center/85% no-repeat url(../image/tasks/minus_2.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .minus_3 {
-  background: center/90% no-repeat url(../image/tasks_right_menu_minus_3.png);
+  background: center/85% no-repeat url(../image/tasks/minus_3.png);
+}
+
+section .pda_empty .main .tasks .tasks_right .tasks_right_menu .minus_3:hover {
+  background: center/85% no-repeat url(../image/tasks/minus_3.png);
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_map {
@@ -453,9 +547,8 @@ section .pda_empty .main .main_menu {
           justify-content: space-between;
 }
 
-section .pda_empty .main .main_menu ul {
+section .pda_empty .main .main_menu #main_menu_list {
   padding-left: 2.6%;
-  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,7 +557,7 @@ section .pda_empty .main .main_menu ul {
           align-items: center;
 }
 
-section .pda_empty .main .main_menu ul li {
+section .pda_empty .main .main_menu #main_menu_list li {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -476,19 +569,19 @@ section .pda_empty .main .main_menu ul li {
   color: #646464;
 }
 
-section .pda_empty .main .main_menu ul li:hover {
+section .pda_empty .main .main_menu #main_menu_list li:hover {
   color: #d2d2d2;
 }
 
-section .pda_empty .main .main_menu ul li::before {
+section .pda_empty .main .main_menu #main_menu_list li::before {
   content: "";
   height: 1.6vh;
   width: 0.83vw;
   margin-right: 0.2vw;
-  background: center/contain no-repeat url(../image/main_menu_list_inactive.png);
+  background: center/contain no-repeat url(../image/main_menu/list_1.png);
 }
 
-section .pda_empty .main .main_menu ul li:not(:last-child)::after {
+section .pda_empty .main .main_menu #main_menu_list li:not(:last-child)::after {
   content: "//";
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -498,12 +591,12 @@ section .pda_empty .main .main_menu ul li:not(:last-child)::after {
   color: #646464;
 }
 
-section .pda_empty .main .main_menu ul li:not(:first-child) {
+section .pda_empty .main .main_menu #main_menu_list li:not(:first-child) {
   margin-left: -0.1%;
 }
 
-section .pda_empty .main .main_menu ul .notice::before {
-  background: center/contain no-repeat url(../image/main_menu_list_active.png);
+section .pda_empty .main .main_menu #main_menu_list .notice::before {
+  background: center/contain no-repeat url(../image/main_menu/list_2.png);
 }
 
 section .pda_empty .main .main_menu time {

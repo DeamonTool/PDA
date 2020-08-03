@@ -5,7 +5,7 @@ $color_orange: #e6a000;
 $color_green: #009600;
 $size_1: 1.25vw;
 $size_2: 0.94vw;
-$size_3: 12px;
+$size_3: 0.76vw;
 
 ::-webkit-scrollbar {
     height: 1.4vw;
@@ -130,29 +130,29 @@ $size_3: 12px;
 }
 
 @-webkit-keyframes cursor {
-    0% {cursor: url(../image/cursor_1.png), auto;}
-    14% {cursor: url(../image/cursor_2.png), auto;}
-    29% {cursor: url(../image/cursor_3.png), auto;}
-    43% {cursor: url(../image/cursor_4.png), auto;}
-    57% {cursor: url(../image/cursor_5.png), auto;}
-    71% {cursor: url(../image/cursor_6.png), auto;}
-    86% {cursor: url(../image/cursor_7.png), auto;}
-    100% {cursor: url(../image/cursor_8.png), auto;}
+    0% {cursor: url(../image/cursor/1.png), auto;}
+    14% {cursor: url(../image/cursor/2.png), auto;}
+    29% {cursor: url(../image/cursor/3.png), auto;}
+    43% {cursor: url(../image/cursor/4.png), auto;}
+    57% {cursor: url(../image/cursor/5.png), auto;}
+    71% {cursor: url(../image/cursor/6.png), auto;}
+    86% {cursor: url(../image/cursor/7.png), auto;}
+    100% {cursor: url(../image/cursor/8.png), auto;}
 }
 
 @keyframes cursor {
-    0% {cursor: url(../image/cursor_1.png), auto;}
-    14% {cursor: url(../image/cursor_2.png), auto;}
-    29% {cursor: url(../image/cursor_3.png), auto;}
-    43% {cursor: url(../image/cursor_4.png), auto;}
-    57% {cursor: url(../image/cursor_5.png), auto;}
-    71% {cursor: url(../image/cursor_6.png), auto;}
-    86% {cursor: url(../image/cursor_7.png), auto;}
-    100% {cursor: url(../image/cursor_8.png), auto;}
+    0% {cursor: url(../image/cursor/1.png), auto;}
+    14% {cursor: url(../image/cursor/2.png), auto;}
+    29% {cursor: url(../image/cursor/3.png), auto;}
+    43% {cursor: url(../image/cursor/4.png), auto;}
+    57% {cursor: url(../image/cursor/5.png), auto;}
+    71% {cursor: url(../image/cursor/6.png), auto;}
+    86% {cursor: url(../image/cursor/7.png), auto;}
+    100% {cursor: url(../image/cursor/8.png), auto;}
 }
 
 * {
-    cursor: url(../image/cursor_1.png), auto;
+    cursor: url(../image/cursor/1.png), auto;
     -webkit-animation: cursor 480ms infinite;
     animation: cursor 480ms infinite;
 }
@@ -164,9 +164,13 @@ html, body {
     scrollbar-arrow-color: #ffffff;
 }
 
-body, ul, li {
+body, p, ul, li, ol {
     margin: 0;
     padding: 0;
+}
+
+ul, li, ol {
+    list-style-type: none;
 }
 
 section {
@@ -200,7 +204,7 @@ section {
                 margin-top: -0.2%;
                 padding-bottom: 1%;
                 display: flex;
-                background: top/contain no-repeat url(../image/tasks.png);
+                background: top/contain no-repeat url(../image/tasks/tasks.png);
 
                 .tasks_left {
                     width: 47%;
@@ -228,7 +232,7 @@ section {
 
                         .tasks_left_title_image {
                             width: 13%;
-                            background: center/50% no-repeat url(../image/tasks_left_title_load.gif);
+                            background: center/50% no-repeat url(../image/tasks/load.gif);
                         }
                     }
 
@@ -238,44 +242,97 @@ section {
                         display: flex;
                         position: relative;
 
-                        .tasks_left_menu_active {
+                        .tasks_left_menu_active, .tasks_left_menu_completed, .tasks_left_menu_failed {
                             width: 100%;
                             margin-top: 1.5%;
                             margin-bottom: 2.5%;
                             display: flex;
                             overflow-y: scroll;
 
-                            #tasks_left_menu_active_list {
-                                height: 100%;
-                                width: 100%;
-                                list-style-type: none;
+                            #tasks_left_menu_active_list,  #tasks_left_menu_completed_list, #tasks_left_menu_failed_list{
+                                height: 91%;
+                                width: 93%;
+                                margin-top: 3.8%;
+                                margin-left: 3%;
                                 display: block;
+                                flex-direction: column;
             
-                                li {
-                                    width: auto;
-                                    margin: 5% 5% 7% 5%;
+                                ol {
+                                    margin-bottom: 2%;
                                     display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    font-size: $size_1;
-                                    color: $color_violet;
+                                    flex-direction: column;
+
+                                    .task_title {
+                                        height: 13%;
+                                        margin-bottom: 2.8%;
+                                        display: flex;
+
+                                        img {
+                                            width: 29%;
+                                        }
+
+                                        .task_title_text {
+                                            width: 61%;
+                                            padding-top: 0.4%;
+                                            padding-left: 0.6%;
+                                            display: flex;
+                                            flex-direction: column;
+                                            font-size: $size_2;
+                                            color: $color_white;
+
+                                            p {
+                                                margin-top: 2.5%;
+                                                font-size: $size_3;
+                                                color: $color_violet;
+                                            }
+                                        }
+
+                                        .task_title_info {
+                                            width: 10%;
+                                            margin-bottom: 7.4%;
+                                            background: center/80% no-repeat url(../image/tasks/info_1.png);
+
+                                            &:hover {background: center/80% no-repeat url(../image/tasks/info_2.png);}
+                                        }
+
+                                        .info_3 {
+                                            background: center/80% no-repeat url(../image/tasks/info_3.png);
+
+                                            &:hover {background: center/80% no-repeat url(../image/tasks/info_3.png);}
+                                        }
+                                    }
+
+                                    li {
+                                        height: 1.14vw;
+                                        margin-bottom: 2%;
+                                        display: flex;
+                                        font-size: $size_3;
+                                        color: $color_gray;
+
+                                        &::before {
+                                            content: "";
+                                            height: 1.8vh;
+                                            width: 0.9vw;
+                                            margin-right: 2.2%;
+                                            background: top/contain no-repeat url(../image/tasks/radiobutton_1.png);
+                                        }
+                                    }
+
+                                    .done {
+                                        color: $color_violet;
+
+                                        &::before {background: top/contain no-repeat url(../image/tasks/radiobutton_2.png);}
+                                    }
+
+                                    .fail {
+                                        color: $color_violet;
+
+                                        &::before {background: top/contain no-repeat url(../image/tasks/radiobutton_3.png);}
+                                    }
                                 }
+
+                                ol:last-child {padding-bottom: 25%;}
                             }
-                        }
-
-                        .tasks_left_menu_completed {
-                            width: 100%;
-                            margin-top: 1.5%;
-                            margin-bottom: 2.5%;
-                            overflow-y: scroll;
-                        }
-
-                        .tasks_left_menu_failed {
-                            width: 100%;
-                            margin-top: 1.5%;
-                            margin-bottom: 2.5%;
-                            display: flex;
-                            overflow-y: scroll;
                         }
 
                         #tasks_left_menu_list {
@@ -283,15 +340,16 @@ section {
                             width: 90%;
                             bottom: 0;
                             margin-left: 1.5%;
-                            padding: 0 10% 1.5% 2%;
-                            list-style-type: none;
+                            padding-bottom: 1.5%;
+                            padding-right: 10%;
+                            padding-left: 2%;
                             display: flex;
                             align-items: flex-end;
                             justify-content: space-between;
                             position: absolute;
                             background:
-                                linear-gradient(0deg, #111313 83%, #00000000 0),
-                                linear-gradient(0deg, #222424 86%, #00000000 0);
+                                linear-gradient(0deg, #111313 84%, #00000000 0),
+                                linear-gradient(0deg, #222424 87%, #00000000 0);
                             background-color: #111313;
         
                             li {
@@ -315,47 +373,64 @@ section {
                     .tasks_right_menu {
                         height: 4%;
                         width: 86%;
-                        padding-top: 0.5%;
                         display: flex;
 
                         .tasks_right_menu_full {
                             width: 7%;
-                            margin-left: 0.5%;
-                            background: center/90% no-repeat url(../image/tasks_right_menu_full_1.png);
+                            margin-left: 0.2%;
+                            background: center/85% no-repeat url(../image/tasks/full_1.png);
 
-                            &:hover {background: center/90% no-repeat url(../image/tasks_right_menu_full_2.png);}
+                            &:hover {background: center/85% no-repeat url(../image/tasks/full_2.png);}
                         }
 
-                        .full_3 {background: center/90% no-repeat url(../image/tasks_right_menu_full_3.png);}
+                        .full_3 {
+                            background: center/85% no-repeat url(../image/tasks/full_3.png);
+                        
+                            &:hover {background: center/85% no-repeat url(../image/tasks/full_3.png);}
+                        }
                         
                         .tasks_right_menu_player {
                             width: 7%;
-                            margin-left: -0.5%;
-                            background: center/90% no-repeat url(../image/tasks_right_menu_player_1.png);
+                            margin-left: -1%;
+                            background: center/85% no-repeat url(../image/tasks/player_1.png);
 
-                            &:hover {background: center/90% no-repeat url(../image/tasks_right_menu_player_2.png);}
+                            &:hover {background: center/85% no-repeat url(../image/tasks/player_2.png);}
                         }
 
-                        .player_3 {background: center/90% no-repeat url(../image/tasks_right_menu_player_3.png);}
+                        .player_3 {
+                            background: center/85% no-repeat url(../image/tasks/player_3.png);
+                        
+                            &:hover {background: center/85% no-repeat url(../image/tasks/player_3.png);}
+                        }
 
                         .tasks_right_menu_plus {
                             width: 7%;
+                            margin-top: 0.1%;
                             margin-left: auto;
-                            background: center/90% no-repeat url(../image/tasks_right_menu_plus_1.png);
+                            background: center/85% no-repeat url(../image/tasks/plus_1.png);
 
-                            &:hover {background: center/90% no-repeat url(../image/tasks_right_menu_plus_2.png);}
+                            &:hover {background: center/85% no-repeat url(../image/tasks/plus_2.png);}
                         }
 
-                        .plus_3 {background: center/90% no-repeat url(../image/tasks_right_menu_plus_3.png);}
+                        .plus_3 {
+                            background: center/85% no-repeat url(../image/tasks/plus_3.png);
+                        
+                            &:hover {background: center/85% no-repeat url(../image/tasks/plus_3.png);}
+                        }
 
                         .tasks_right_menu_minus {
                             width: 7%;
-                            background: center/90% no-repeat url(../image/tasks_right_menu_minus_1.png);
+                            margin-top: 0.1%;
+                            background: center/85% no-repeat url(../image/tasks/minus_1.png);
 
-                            &:hover {background: center/90% no-repeat url(../image/tasks_right_menu_minus_2.png);}
+                            &:hover {background: center/85% no-repeat url(../image/tasks/minus_2.png);}
                         }
 
-                        .minus_3 {background: center/90% no-repeat url(../image/tasks_right_menu_minus_3.png);}
+                        .minus_3 {
+                            background: center/85% no-repeat url(../image/tasks/minus_3.png);
+                        
+                            &:hover {background: center/85% no-repeat url(../image/tasks/minus_3.png);}
+                        }
                     }
 
                     .tasks_right_map {
@@ -384,9 +459,8 @@ section {
                 display: flex;
                 justify-content: space-between;
 
-                ul {
+                #main_menu_list {
                     padding-left: 2.6%;
-                    list-style-type: none;
                     display: flex;
                     align-items: center;
 
@@ -404,7 +478,7 @@ section {
                             height: 1.6vh;
                             width: 0.83vw;
                             margin-right: 0.2vw;
-                            background: center/contain no-repeat url(../image/main_menu_list_inactive.png);
+                            background: center/contain no-repeat url(../image/main_menu/list_1.png);
                         }
 
                         &:not(:last-child)::after {
@@ -417,7 +491,7 @@ section {
                         &:not(:first-child) {margin-left: -0.1%;}
                     }
 
-                    .notice::before {background: center/contain no-repeat url(../image/main_menu_list_active.png);}
+                    .notice::before {background: center/contain no-repeat url(../image/main_menu/list_2.png);}
                 }
                 
                 time {

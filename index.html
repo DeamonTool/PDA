@@ -27,25 +27,96 @@
                         <div class="tasks_left_menu">
                             <div class="tasks_left_menu_active">
                                 <ul id="tasks_left_menu_active_list">
-                                    <li>«Своими словами.» Люди ведь говорят так? Можно частенько услышать на уроке в
-                                        школе или в зале суда, как вас спросят: «Расскажите нам своими словами.» У вас
-                                        что, есть какие-то свои слова? Эй, я пользуюсь теми, что и все. В следующий раз,
-                                        когда вас попросят рассказать что-нибудь своими словами, скажите: «Ник флак
-                                        фларни клондо флю».</li>
-                                    <li>Скажите людям, что есть невидимый человек на небе, который создал вселенную, и
-                                        большинство поверит. Скажите им, что краска не высохла, и они воткнут в нее
-                                        палец, чтобы убедиться в этом.</li>
-                                    <li>Когда люди решают прекратить с кем-то близкие отношения, они часто употребляют
-                                        избитую фразочку — «двигаться дальше». Типа: «Я застала Стива в постели со
-                                        стриптизершей, они делали гадкие вещи. И я решила: нужно двигаться дальше». А я
-                                        думаю про себя: «Вообще-то, кто тут решил двигаться дальше, так это скорее
-                                        Стив».</li>
+                                    <ol id="task_1">
+                                        <div class="task_title">
+                                            <img src="./image/tasks/task_1.png">
+
+                                            <div class="task_title_text">Убить Стрелка<p>31/12/2020 15:51</p></div>
+                                            
+                                            <div onclick="tasksLeftMenuInfo(0)" class="task_title_info"></div>
+                                        </div>
+
+                                        <li>Найти Стрелка</li>
+                                        <li>Убить Стрелка</li>
+                                    </ol>
+
+                                    <ol id="task_2">
+                                        <div class="task_title">
+                                            <img src="./image/tasks/task_2.png">
+
+                                            <div class="task_title_text">Забрать информацию у разведчика<p>01/01/2020 13:37</p></div>
+                                            
+                                            <div onclick="tasksLeftMenuInfo(1)" class="task_title_info"></div>
+                                        </div>
+
+                                        <li class="done">Поговорить с Волком</li>
+                                        <li class="fail">Встретиться с людьми Волка</li>
+                                        <li>Уничтожить бандитов на АТП</li>
+                                        <li>Взять у Шустрого флешку</li>
+                                        <li>Принести флешку торговцу</li>
+                                    </ol>
+
+                                    <ol id="task_3">
+                                        <div class="task_title">
+                                            <img src="./image/tasks/task_3.png">
+
+                                            <div class="task_title_text">Пробраться за железнодорожную насыпь<p>02/01/2020 15:05</p></div>
+                                            
+                                            <div onclick="tasksLeftMenuInfo(2)" class="task_title_info"></div>
+                                        </div>
+
+                                        <li>Встретиться с провожатым</li>
+                                        <li>Пересечь железнодорожную насыпь</li>
+                                    </ol>
+
+                                    <ol id="task_4">
+                                        <div class="task_title">
+                                            <img src="./image/tasks/task_4.png">
+
+                                            <div class="task_title_text">Добыть артефакт<p>12/09/2020 07:40</p><p>Осталось 1 дн.</p></div>
+                                            
+                                            <div onclick="tasksLeftMenuInfo(3)" class="task_title_info"></div>
+                                        </div>
+
+                                        <li class="done">Найти артефакт "Медуза"</li>
+                                        <li>Принести заказчику обещанное</li>
+                                    </ol>
                                 </ul>
                             </div>
 
-                            <div class="tasks_left_menu_completed" style="display: none"></div>
+                            <div class="tasks_left_menu_completed" style="display: none">
+                                <ul id="tasks_left_menu_completed_list">
+                                    <ol id="task_5">
+                                        <div class="task_title">
+                                            <img src="./image/tasks/task_5.png">
 
-                            <div class="tasks_left_menu_failed" style="display: none"></div>
+                                            <div class="task_title_text">Уничтожение лагеря<p>25/02/2020 02:28</p></div>
+                                            
+                                            <div onclick="tasksLeftMenuInfo(4)" class="task_title_info"></div>
+                                        </div>
+
+                                        <li class="done">Зачистить местность от мутатнтов</li>
+                                        <li class="done">Вернуться за наградой</li>
+                                    </ol>
+                                </ul>
+                            </div>
+
+                            <div class="tasks_left_menu_failed" style="display: none">
+                                <ul id="tasks_left_menu_completed_list">
+                                    <ol id="task_6">
+                                        <div class="task_title">
+                                            <img src="./image/tasks/task_6.png">
+
+                                            <div class="task_title_text">Убить сталкера<p>10/09/2020 06:36</p></div>
+                                            
+                                            <div onclick="tasksLeftMenuInfo(5)" class="task_title_info"></div>
+                                        </div>
+
+                                        <li class="done">Убить "торгового представителя"</li>
+                                        <li class="fail">Вернуться за наградой</li>
+                                    </ol>
+                                </ul>
+                            </div>
 
                             <ul id="tasks_left_menu_list">
                                 <li onclick="tasksLeftMenuSwitch(0)" style="color: #e6a000">Активные</li>
