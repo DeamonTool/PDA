@@ -168,10 +168,7 @@ audio {
 
 *, ::before, ::after {box-sizing: border-box;}
 
-html, body {
-    font-family: "Roboto";
-    scrollbar-arrow-color: #ffffff;
-}
+html, body {font-family: "Roboto";}
 
 body, p, ul, li, ol {
     margin: 0;
@@ -252,12 +249,40 @@ section {
                         display: flex;
                         position: relative;
 
+                        ::-webkit-scrollbar-button:vertical:end:increment {
+                            height: 7%;
+                            background:
+                                linear-gradient(180deg, #111313 12%, #00000000 0),
+                                linear-gradient(325deg, #393c48 52%, #00000000 0),
+                                linear-gradient(35deg, #393c48 52%, #00000000 0),
+                                linear-gradient(180deg, #393c48 28%, #00000000 0);
+                            background-color: #31323c;
+
+                            &:hover {
+                                background:
+                                    linear-gradient(180deg, #111313 12%, #00000000 0),
+                                    linear-gradient(325deg, #505066 52%, #00000000 0),
+                                    linear-gradient(35deg, #505066 52%, #00000000 0),
+                                    linear-gradient(180deg, #505066 28%, #00000000 0);
+                                background-color: #414151;
+                            }
+                        
+                            &:active {
+                                background:
+                                    linear-gradient(180deg, #111313 12%, #00000000 0),
+                                    linear-gradient(325deg, #9695b3 52%, #00000000 0),
+                                    linear-gradient(35deg, #9695b3 52%, #00000000 0),
+                                    linear-gradient(180deg, #9695b3 28%, #00000000 0);
+                                background-color: #73758b;
+                            }
+                        }
+
                         .tasks_left_menu_active,
                         .tasks_left_menu_completed,
                         .tasks_left_menu_failed {
                             width: 100%;
                             margin-top: 1.5%;
-                            margin-bottom: 2.5%;
+                            margin-bottom: 0.3%;
                             display: flex;
                             overflow-y: scroll;
 
@@ -383,6 +408,16 @@ section {
         
                                 &:hover {color: $color_white;}
                             }
+                        }
+
+                        .scroll_fix_1 {
+                            height: 2.3%;
+                            width: 4.5%;
+                            bottom: 0.24%;
+                            right: 0;
+                            position: absolute;
+                            background: right no-repeat url(../image/tasks/scroll_fix_1.png);
+                            background-size: cover;
                         }
                     }
                 }

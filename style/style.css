@@ -154,7 +154,6 @@ audio::-webkit-media-controls-panel {
 
 html, body {
   font-family: "Roboto";
-  scrollbar-arrow-color: #ffffff;
 }
 
 body, p, ul, li, ol {
@@ -276,12 +275,28 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu {
   position: relative;
 }
 
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu ::-webkit-scrollbar-button:vertical:end:increment {
+  height: 7%;
+  background: linear-gradient(180deg, #111313 12%, #00000000 0), linear-gradient(325deg, #393c48 52%, #00000000 0), linear-gradient(35deg, #393c48 52%, #00000000 0), linear-gradient(180deg, #393c48 28%, #00000000 0);
+  background-color: #31323c;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu ::-webkit-scrollbar-button:vertical:end:increment:hover {
+  background: linear-gradient(180deg, #111313 12%, #00000000 0), linear-gradient(325deg, #505066 52%, #00000000 0), linear-gradient(35deg, #505066 52%, #00000000 0), linear-gradient(180deg, #505066 28%, #00000000 0);
+  background-color: #414151;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu ::-webkit-scrollbar-button:vertical:end:increment:active {
+  background: linear-gradient(180deg, #111313 12%, #00000000 0), linear-gradient(325deg, #9695b3 52%, #00000000 0), linear-gradient(35deg, #9695b3 52%, #00000000 0), linear-gradient(180deg, #9695b3 28%, #00000000 0);
+  background-color: #73758b;
+}
+
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed {
   width: 100%;
   margin-top: 1.5%;
-  margin-bottom: 2.5%;
+  margin-bottom: 0.3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,6 +613,16 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_li
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_list li:hover {
   color: #d2d2d2;
+}
+
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .scroll_fix_1 {
+  height: 2.3%;
+  width: 4.5%;
+  bottom: 0.24%;
+  right: 0;
+  position: absolute;
+  background: right no-repeat url(../image/tasks/scroll_fix_1.png);
+  background-size: cover;
 }
 
 section .pda_empty .main .tasks .tasks_right {
