@@ -216,8 +216,7 @@ section {
                 .tasks_left {
                     width: 47%;
                     margin-top: 1.9%;
-                    padding-right: 3%;
-                    padding-left: 1.4%;
+                    padding: 0 3% 0 1.4%;
                     display: flex;
                     flex-direction: column;
 
@@ -227,9 +226,7 @@ section {
                         justify-content: space-between;
 
                         .tasks_left_title_text {
-                            padding-top: 1%;
-                            padding-left: 4.4%;
-                            display: flex;
+                            padding: 1% 0 0 4.4%;
                             align-items: center;
                             justify-content: center;
                             font-size: $size_1;
@@ -281,9 +278,7 @@ section {
                         .tasks_left_menu_completed,
                         .tasks_left_menu_failed {
                             width: 100%;
-                            margin-top: 1.5%;
-                            margin-bottom: 0.3%;
-                            display: flex;
+                            margin: 1.5% 0 0.3% 0;
                             overflow-y: scroll;
 
                             #tasks_left_menu_active_list,
@@ -291,9 +286,7 @@ section {
                             #tasks_left_menu_failed_list {
                                 height: 91%;
                                 width: 93%;
-                                margin-top: 3.8%;
-                                margin-left: 3%;
-                                display: block;
+                                margin: 3.8% 0 0 3%;
                                 flex-direction: column;
             
                                 ol {
@@ -313,8 +306,7 @@ section {
 
                                         .task_title_text {
                                             width: 61%;
-                                            padding-top: 0.4%;
-                                            padding-left: 0.6%;
+                                            padding: 0.4% 0 0 0.6%;
                                             display: flex;
                                             flex-direction: column;
                                             font-size: $size_2;
@@ -372,8 +364,7 @@ section {
 
                                     .target {
                                         width: 9%;
-                                        padding-bottom: 0.5%;
-                                        margin-left: auto;
+                                        margin: -1.2% 0 0 auto;
                                         background: right/90% no-repeat url(../image/tasks/target_1.png);
                                     
                                         &:hover {background: right/90% no-repeat url(../image/tasks/target_2.png);}
@@ -389,9 +380,7 @@ section {
                             width: 90%;
                             bottom: 0;
                             margin-left: 1.5%;
-                            padding-bottom: 1.5%;
-                            padding-right: 10%;
-                            padding-left: 2%;
+                            padding: 0 10% 1.5% 2%;
                             display: flex;
                             align-items: flex-end;
                             justify-content: space-between;
@@ -416,8 +405,7 @@ section {
                             bottom: 0.3%;
                             right: 0;
                             position: absolute;
-                            background: right no-repeat url(../image/tasks/scroll_fix_1.png);
-                            background-size: cover;
+                            background: right/cover no-repeat url(../image/tasks/scroll_fix_1.png);
                         }
                     }
                 }
@@ -426,7 +414,6 @@ section {
                     width: 53%;
                     margin-top: 1.9%;
                     padding-right: 1%;
-                    display: flex;
                     flex-direction: column;
 
                     .tasks_right_menu {
@@ -464,8 +451,7 @@ section {
 
                         .tasks_right_menu_plus {
                             width: 7%;
-                            margin-top: 0.1%;
-                            margin-left: auto;
+                            margin: 0.1% 0 0 auto;
                             background: center/85% no-repeat url(../image/tasks/plus_1.png);
 
                             &:hover {background: center/85% no-repeat url(../image/tasks/plus_2.png);}
@@ -494,8 +480,7 @@ section {
 
                     .tasks_right_map {
                         height: 95%;
-                        margin-top: 0.8%;
-                        margin-left: 0.5%;
+                        margin: 0.8% 0 0 0.5%;
                         display: flex;
                         overflow: scroll;
             
@@ -554,8 +539,7 @@ section {
                 }
                 
                 time {
-                    padding-top: 0.1%;
-                    padding-right: 8%;
+                    padding: 0.1% 8% 0 0;
                     align-items: center;
                     font-size: $size_2;
                     color: $color_white;

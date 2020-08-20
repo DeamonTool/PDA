@@ -223,8 +223,7 @@ section .pda_empty .main .tasks {
 section .pda_empty .main .tasks .tasks_left {
   width: 47%;
   margin-top: 1.9%;
-  padding-right: 3%;
-  padding-left: 1.4%;
+  padding: 0 3% 0 1.4%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,11 +244,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_title {
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_text {
-  padding-top: 1%;
-  padding-left: 4.4%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 1% 0 0 4.4%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -295,11 +290,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_ac
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed {
   width: 100%;
-  margin-top: 1.5%;
-  margin-bottom: 0.3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 1.5% 0 0.3% 0;
   overflow-y: scroll;
 }
 
@@ -314,9 +305,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list {
   height: 91%;
   width: 93%;
-  margin-top: 3.8%;
-  margin-left: 3%;
-  display: block;
+  margin: 3.8% 0 0 3%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -384,8 +373,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title .task_title_text,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title .task_title_text {
   width: 61%;
-  padding-top: 0.4%;
-  padding-left: 0.6%;
+  padding: 0.4% 0 0 0.6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,8 +541,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .target,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .target {
   width: 9%;
-  padding-bottom: 0.5%;
-  margin-left: auto;
+  margin: -1.2% 0 0 auto;
   background: right/90% no-repeat url(../image/tasks/target_1.png);
 }
 
@@ -587,9 +574,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_li
   width: 90%;
   bottom: 0;
   margin-left: 1.5%;
-  padding-bottom: 1.5%;
-  padding-right: 10%;
-  padding-left: 2%;
+  padding: 0 10% 1.5% 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,17 +606,13 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .scroll_fix_1 {
   bottom: 0.3%;
   right: 0;
   position: absolute;
-  background: right no-repeat url(../image/tasks/scroll_fix_1.png);
-  background-size: cover;
+  background: right/cover no-repeat url(../image/tasks/scroll_fix_1.png);
 }
 
 section .pda_empty .main .tasks .tasks_right {
   width: 53%;
   margin-top: 1.9%;
   padding-right: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -684,8 +665,7 @@ section .pda_empty .main .tasks .tasks_right .tasks_right_menu .player_3:hover {
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_plus {
   width: 7%;
-  margin-top: 0.1%;
-  margin-left: auto;
+  margin: 0.1% 0 0 auto;
   background: center/85% no-repeat url(../image/tasks/plus_1.png);
 }
 
@@ -721,8 +701,7 @@ section .pda_empty .main .tasks .tasks_right .tasks_right_menu .minus_3:hover {
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_map {
   height: 95%;
-  margin-top: 0.8%;
-  margin-left: 0.5%;
+  margin: 0.8% 0 0 0.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -809,8 +788,7 @@ section .pda_empty .main .main_menu #main_menu_list .notice::before {
 }
 
 section .pda_empty .main .main_menu time {
-  padding-top: 0.1%;
-  padding-right: 8%;
+  padding: 0.1% 8% 0 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
