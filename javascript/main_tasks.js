@@ -22,7 +22,7 @@ function tasksLeftMenuSwitch(index) {
 function tasksLeftMenuInfo(index) {
     let info = document.getElementsByClassName("task_title_info")
 
-    for (let i = 0; i < info.length; i++) info[i].classList.toggle("info_3")
+    for (let element in info) element.classList.toggle("info_3")
 }
 
 function tasksRightMenuFull() {
