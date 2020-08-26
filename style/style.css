@@ -409,7 +409,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title .task_title_info,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title .task_title_info {
   width: 9%;
-  margin-bottom: 7%;
+  margin-bottom: 7.5%;
   background: right/80% no-repeat url(../image/tasks/info_1.png);
 }
 
@@ -463,6 +463,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   font-size: 0.76vw;
   color: #646464;
 }
@@ -557,6 +558,24 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
   background: right/90% no-repeat url(../image/tasks/target_2.png);
 }
 
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .mark::after,
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol .mark::after,
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol .mark::after,
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_active_list ol .mark::after,
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_completed_list ol .mark::after,
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_completed #tasks_left_menu_failed_list ol .mark::after,
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_active_list ol .mark::after,
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .mark::after,
+section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .mark::after {
+  content: "";
+  height: 145%;
+  width: 10%;
+  right: 7.4%;
+  margin-top: -1.7%;
+  position: absolute;
+  background: center/contain no-repeat url(../image/tasks/mark.gif);
+}
+
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol:last-child,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_completed_list ol:last-child,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_failed_list ol:last-child,
@@ -603,8 +622,8 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_li
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .scroll_fix_1 {
   height: 2.2%;
   width: 4.8%;
-  bottom: 0.3%;
   right: 0;
+  bottom: 0.3%;
   position: absolute;
   background: right/cover no-repeat url(../image/tasks/scroll_fix_1.png);
 }
@@ -699,6 +718,12 @@ section .pda_empty .main .tasks .tasks_right .tasks_right_menu .minus_3:hover {
   background: center/85% no-repeat url(../image/tasks/minus_3.png);
 }
 
+section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_info_title {
+  padding: 0.9% 0 0 3.7%;
+  font-size: 0.76vw;
+  color: #d2d2d2;
+}
+
 section .pda_empty .main .tasks .tasks_right .tasks_right_map {
   height: 95%;
   margin: 0.8% 0 0 0.5%;
@@ -720,7 +745,7 @@ section .pda_empty .main .tasks .tasks_right .tasks_right_map li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.25vw;
+  font-size: 0.94vw;
   color: #009600;
 }
 

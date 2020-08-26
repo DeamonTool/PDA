@@ -321,7 +321,7 @@ section {
 
                                         .task_title_info {
                                             width: 9%;
-                                            margin-bottom: 7%;
+                                            margin-bottom: 7.5%;
                                             background: right/80% no-repeat url(../image/tasks/info_1.png);
 
                                             &:hover {background: right/80% no-repeat url(../image/tasks/info_2.png);}
@@ -338,6 +338,7 @@ section {
                                         height: 1.14vw;
                                         margin-bottom: 2%;
                                         display: flex;
+                                        position: relative;
                                         font-size: $size_3;
                                         color: $color_gray;
 
@@ -368,6 +369,16 @@ section {
                                         background: right/90% no-repeat url(../image/tasks/target_1.png);
                                     
                                         &:hover {background: right/90% no-repeat url(../image/tasks/target_2.png);}
+                                    }
+
+                                    .mark::after {
+                                        content: "";
+                                        height: 145%;
+                                        width: 10%;
+                                        right: 7.4%;
+                                        margin-top: -1.7%;
+                                        position: absolute;
+                                        background: center/contain no-repeat url(../image/tasks/mark.gif);
                                     }
                                 }
 
@@ -402,8 +413,8 @@ section {
                         .scroll_fix_1 {
                             height: 2.2%;
                             width: 4.8%;
-                            bottom: 0.3%;
                             right: 0;
+                            bottom: 0.3%;
                             position: absolute;
                             background: right/cover no-repeat url(../image/tasks/scroll_fix_1.png);
                         }
@@ -476,6 +487,12 @@ section {
                         
                             &:hover {background: center/85% no-repeat url(../image/tasks/minus_3.png);}
                         }
+
+                        .tasks_right_menu_info_title {
+                            padding: 0.9% 0 0 3.7%;
+                            font-size: $size_3;
+                            color: $color_white;
+                        }
                     }
 
                     .tasks_right_map {
@@ -490,7 +507,7 @@ section {
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            font-size: $size_1;
+                            font-size: $size_2;
                             color: $color_green;
                         }
                     }

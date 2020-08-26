@@ -23,6 +23,6 @@ function mainMenuSwitch(index) {
     if (list[index].classList.length) list[index].classList.toggle("notice")
 }
 
-//  Музыка на заднем фоне
+//  Фоновая музыка
 
 document.getElementsByTagName("audio")[0].volume = 0.01
