@@ -10,93 +10,96 @@ $size_3: 0.76vw;
 ::-webkit-scrollbar {
     height: 1.4vw;
     width: 1.5vw;
-    background-color: #202225;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {background-color: #393c48;}
 
-::-webkit-scrollbar-corner {background-color: #00000000;}
+::-webkit-scrollbar-corner {background-color: transparent;}
 
 ::-webkit-scrollbar-button:vertical:start:decrement {
     height: 5%;
     background:
-        linear-gradient(0deg, #111313 12%, #00000000 0),
-        linear-gradient(145deg, #393c48 38%, #00000000 0),
-        linear-gradient(215deg, #393c48 38%, #00000000 0),
-        linear-gradient(0deg, #393c48 45%, #00000000 0);
+        linear-gradient(0deg, #111313 12%, transparent 0),
+        linear-gradient(145deg, #393c48 42%, transparent 0),
+        linear-gradient(215deg, #393c48 42%, transparent 0),
+        linear-gradient(0deg, #393c48 42%, transparent 0);
     background-color: #31323c;
 
     &:hover {
         background:
-            linear-gradient(0deg, #111313 12%, #00000000 0),
-            linear-gradient(145deg, #505066 38%, #00000000 0),
-            linear-gradient(215deg, #505066 38%, #00000000 0),
-            linear-gradient(0deg, #505066 45%, #00000000 0);
+            linear-gradient(0deg, #111313 12%, transparent 0),
+            linear-gradient(145deg, #505066 42%, transparent 0),
+            linear-gradient(215deg, #505066 42%, transparent 0),
+            linear-gradient(0deg, #505066 42%, transparent 0);
         background-color: #414151;
     }
 
     &:active {
         background:
-            linear-gradient(0deg, #111313 12%, #00000000 0),
-            linear-gradient(145deg, #9695b3 38%, #00000000 0),
-            linear-gradient(215deg, #9695b3 38%, #00000000 0),
-            linear-gradient(0deg, #9695b3 45%, #00000000 0);
+            linear-gradient(0deg, #111313 12%, transparent 0),
+            linear-gradient(145deg, #9695b3 42%, transparent 0),
+            linear-gradient(215deg, #9695b3 42%, transparent 0),
+            linear-gradient(0deg, #9695b3 42%, transparent 0);
         background-color: #73758b;
     }
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment {
-    height: 5%;
+    height: 7%;
     background:
-        linear-gradient(180deg, #111313 12%, #00000000 0),
-        linear-gradient(325deg, #393c48 38%, #00000000 0),
-        linear-gradient(35deg, #393c48 38%, #00000000 0),
-        linear-gradient(180deg, #393c48 45%, #00000000 0);
-    background-color: #31323c;
+        linear-gradient(180deg, #111313 12%, transparent 0),
+        linear-gradient(180deg, #393c48 30%, transparent 0),
+        linear-gradient(0deg, transparent 28%, #393c48 0, #393c48 50%, transparent 0),
+        linear-gradient(145deg, transparent 48%, #393c48 0, #393c48 68%, transparent 0),
+        linear-gradient(215deg, #31323c 48%, transparent 0),
+        linear-gradient(140deg, #393c48 68%, transparent 70%);
 
     &:hover {
         background:
-            linear-gradient(180deg, #111313 12%, #00000000 0),
-            linear-gradient(325deg, #505066 38%, #00000000 0),
-            linear-gradient(35deg, #505066 38%, #00000000 0),
-            linear-gradient(180deg, #505066 45%, #00000000 0);
-        background-color: #414151;
+            linear-gradient(180deg, #111313 12%, transparent 0),
+            linear-gradient(180deg, #505066 30%, transparent 0),
+            linear-gradient(0deg, transparent 28%, #505066 0, #505066 50%, transparent 0),
+            linear-gradient(145deg, transparent 48%, #505066 0, #505066 68%, transparent 0),
+            linear-gradient(215deg, #414151 48%, transparent 0),
+            linear-gradient(140deg, #505066 68%, transparent 70%);
     }
 
     &:active {
         background:
-            linear-gradient(180deg, #111313 12%, #00000000 0),
-            linear-gradient(325deg, #9695b3 38%, #00000000 0),
-            linear-gradient(35deg, #9695b3 38%, #00000000 0),
-            linear-gradient(180deg, #9695b3 45%, #00000000 0);
-        background-color: #73758b;
+            linear-gradient(180deg, #111313 12%, transparent 0),
+            linear-gradient(180deg, #9695b3 30%, transparent 0),
+            linear-gradient(0deg, transparent 28%, #9695b3 0, #9695b3 50%, transparent 0),
+            linear-gradient(145deg, transparent 48%, #9695b3 0, #9695b3 68%, transparent 0),
+            linear-gradient(215deg, #73758b 48%, transparent 0),
+            linear-gradient(140deg, #9695b3 68%, transparent 70%);
     }
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement {
     width: 5%;
     background:
-        linear-gradient(270deg, #111313 12%, #00000000 0),
-        linear-gradient(55deg, #393c48 38%, #00000000 0),
-        linear-gradient(125deg, #393c48 38%, #00000000 0),
-        linear-gradient(270deg, #393c48 45%, #00000000 0);
+        linear-gradient(270deg, #111313 12%, transparent 0),
+        linear-gradient(45deg, #393c48 40%, transparent 0),
+        linear-gradient(135deg, #393c48 40%, transparent 0),
+        linear-gradient(270deg, #393c48 42%, transparent 0);
     background-color: #31323c;
 
     &:hover {
         background:
-            linear-gradient(270deg, #111313 12%, #00000000 0),
-            linear-gradient(55deg, #505066 38%, #00000000 0),
-            linear-gradient(125deg, #505066 38%, #00000000 0),
-            linear-gradient(270deg, #505066 45%, #00000000 0);
+            linear-gradient(270deg, #111313 12%, transparent 0),
+            linear-gradient(45deg, #505066 40%, transparent 0),
+            linear-gradient(135deg, #505066 40%, transparent 0),
+            linear-gradient(270deg, #505066 42%, transparent 0);
         background-color: #414151;
     }
 
     &:active {
         background:
-            linear-gradient(270deg, #111313 12%, #00000000 0),
-            linear-gradient(55deg, #9695b3 38%, #00000000 0),
-            linear-gradient(125deg, #9695b3 38%, #00000000 0),
-            linear-gradient(270deg, #9695b3 45%, #00000000 0);
+            linear-gradient(270deg, #111313 12%, transparent 0),
+            linear-gradient(45deg, #9695b3 40%, transparent 0),
+            linear-gradient(135deg, #9695b3 40%, transparent 0),
+            linear-gradient(270deg, #9695b3 42%, transparent 0);
         background-color: #73758b;
     }
 }
@@ -104,27 +107,27 @@ $size_3: 0.76vw;
 ::-webkit-scrollbar-button:horizontal:end:increment {
     width: 5%;
     background:
-        linear-gradient(90deg, #111313 12%, #00000000 0),
-        linear-gradient(235deg, #393c48 38%, #00000000 0),
-        linear-gradient(305deg, #393c48 38%, #00000000 0),
-        linear-gradient(90deg, #393c48 45%, #00000000 0);
+        linear-gradient(90deg, #111313 12%, transparent 0),
+        linear-gradient(225deg, #393c48 40%, transparent 0),
+        linear-gradient(315deg, #393c48 40%, transparent 0),
+        linear-gradient(90deg, #393c48 42%, transparent 0);
     background-color: #31323c;
 
     &:hover {
         background:
-            linear-gradient(90deg, #111313 12%, #00000000 0),
-            linear-gradient(235deg, #505066 38%, #00000000 0),
-            linear-gradient(305deg, #505066 38%, #00000000 0),
-            linear-gradient(90deg, #505066 45%, #00000000 0);
+            linear-gradient(90deg, #111313 12%, transparent 0),
+            linear-gradient(225deg, #505066 40%, transparent 0),
+            linear-gradient(315deg, #505066 40%, transparent 0),
+            linear-gradient(90deg, #505066 42%, transparent 0);
         background-color: #414151;
     }
 
     &:active {
         background:
-            linear-gradient(90deg, #111313 12%, #00000000 0),
-            linear-gradient(235deg, #9695b3 38%, #00000000 0),
-            linear-gradient(305deg, #9695b3 38%, #00000000 0),
-            linear-gradient(90deg, #9695b3 45%, #00000000 0);
+            linear-gradient(90deg, #111313 12%, transparent 0),
+            linear-gradient(225deg, #9695b3 40%, transparent 0),
+            linear-gradient(315deg, #9695b3 40%, transparent 0),
+            linear-gradient(90deg, #9695b3 42%, transparent 0);
         background-color: #73758b;
     }
 }
@@ -245,34 +248,6 @@ section {
                         margin-right: 0.2%;
                         display: flex;
                         position: relative;
-
-                        ::-webkit-scrollbar-button:vertical:end:increment {
-                            height: 7%;
-                            background:
-                                linear-gradient(180deg, #111313 12%, #00000000 0),
-                                linear-gradient(325deg, #393c48 52%, #00000000 0),
-                                linear-gradient(35deg, #393c48 52%, #00000000 0),
-                                linear-gradient(180deg, #393c48 28%, #00000000 0);
-                            background-color: #31323c;
-
-                            &:hover {
-                                background:
-                                    linear-gradient(180deg, #111313 12%, #00000000 0),
-                                    linear-gradient(325deg, #505066 52%, #00000000 0),
-                                    linear-gradient(35deg, #505066 52%, #00000000 0),
-                                    linear-gradient(180deg, #505066 28%, #00000000 0);
-                                background-color: #414151;
-                            }
-                        
-                            &:active {
-                                background:
-                                    linear-gradient(180deg, #111313 12%, #00000000 0),
-                                    linear-gradient(325deg, #9695b3 52%, #00000000 0),
-                                    linear-gradient(35deg, #9695b3 52%, #00000000 0),
-                                    linear-gradient(180deg, #9695b3 28%, #00000000 0);
-                                background-color: #73758b;
-                            }
-                        }
 
                         .tasks_left_menu_active,
                         .tasks_left_menu_completed,
@@ -397,8 +372,8 @@ section {
                             justify-content: space-between;
                             position: absolute;
                             background:
-                                linear-gradient(0deg, #111313 84%, #00000000 0),
-                                linear-gradient(0deg, #222424 87%, #00000000 0);
+                                linear-gradient(0deg, #111313 84%, transparent 0),
+                                linear-gradient(0deg, #222424 87%, transparent 0);
                             background-color: #111313;
         
                             li {
@@ -408,15 +383,6 @@ section {
         
                                 &:hover {color: $color_white;}
                             }
-                        }
-
-                        .scroll_fix_1 {
-                            height: 2.2%;
-                            width: 4.8%;
-                            right: 0;
-                            bottom: 0.3%;
-                            position: absolute;
-                            background: right/cover no-repeat url(../image/tasks/scroll_fix_1.png);
                         }
                     }
                 }
@@ -496,8 +462,8 @@ section {
                     }
 
                     .tasks_right_map {
-                        height: 95%;
-                        margin: 0.8% 0 0 0.5%;
+                        height: 94.5%;
+                        margin: 1.2% 0 0 0.5%;
                         display: flex;
                         overflow: scroll;
             
@@ -505,11 +471,44 @@ section {
                             width: auto;
                             margin: 5% 5% 7% 5%;
                             display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-size: $size_2;
+                            font-size: $size_1;
                             color: $color_green;
                         }
+
+                        &::-webkit-scrollbar-button:vertical:end:increment {
+                            height: 5%;
+                            background:
+                                linear-gradient(180deg, #111313 12%, transparent 0),
+                                linear-gradient(315deg, #393c48 40%, transparent 0),
+                                linear-gradient(45deg, #393c48 40%, transparent 0),
+                                linear-gradient(180deg, #393c48 42%, transparent 0);
+                            background-color: #31323c;
+                            
+                            &:hover {
+                                background:
+                                    linear-gradient(180deg, #111313 12%, transparent 0),
+                                    linear-gradient(315deg, #505066 40%, transparent 0),
+                                    linear-gradient(45deg, #505066 40%, transparent 0),
+                                    linear-gradient(180deg, #505066 42%, transparent 0);
+                                background-color: #414151;
+                            }
+                            
+                            &:active {
+                                background:
+                                    linear-gradient(180deg, #111313 12%, transparent 0),
+                                    linear-gradient(315deg, #9695b3 40%, transparent 0),
+                                    linear-gradient(45deg, #9695b3 40%, transparent 0),
+                                    linear-gradient(180deg, #9695b3 42%, transparent 0);
+                                background-color: #73758b;
+                            }
+                        }
+                    }
+
+                    .tasks_right_info {
+                        height: 94.5%;
+                        margin: 1.2% 0 0 0.5%;
+                        display: flex;
+                        overflow-y: scroll;
                     }
                 }
             }
