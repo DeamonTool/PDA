@@ -24,9 +24,14 @@ function tasksLeftMenuSwitch(index) {
 //  Информация о задании
 
 function tasksLeftMenuInfo(index) {
-    let info = document.getElementsByClassName("task_title_info")
+    let info_title = document.getElementsByClassName("task_title_info")
+    let info = document.getElementsByClassName("tasks_right_info")[0].getElementsByTagName("li")
     let target = document.getElementsByClassName("target")
-    let menu_title = document.getElementsByClassName("tasks_right_menu_info_title")[0]
+    let menu_info = [
+        document.getElementsByClassName("tasks_right_menu_info_title")[0],
+        document.getElementsByClassName("tasks_right_map")[0],
+        document.getElementsByClassName("tasks_right_info")[0]
+    ]
     let menu = [
         document.getElementsByClassName("tasks_right_menu_full")[0],
         document.getElementsByClassName("tasks_right_menu_player")[0],
@@ -34,21 +39,30 @@ function tasksLeftMenuInfo(index) {
         document.getElementsByClassName("tasks_right_menu_minus")[0]
     ]
 
-    for (let i = 0; i < info.length; i++) info[i].classList.toggle("info_3")
+    for (let i = 0; i < info_title.length; i++) info_title[i].classList.toggle("info_3")
 
-    if (info[0].classList.length == 2) {
+    if (info_title[0].classList.length == 2) {
         for (let i = 0; i < target.length; i++) target[i].style.display = "none"
 
-        for (let i = 0; i < 4; i++) menu[i].style.display = "none";
+        for (let i = 0; i < 4; i++) menu[i].style.display = "none"
 
-        menu_title.style.display = "block"
+        menu_info[0].style.display = "block"
+        menu_info[1].style.display = "none"
+        menu_info[2].style.display = "block"
     }
     else {
         for (let i = 0; i < target.length; i++) target[i].style.display = "block"
 
         for (let i = 0; i < 4; i++) menu[i].style.display = "block"
 
-        menu_title.style.display = "none"
+        menu_info[0].style.display = "none"
+        menu_info[1].style.display = "block"
+        menu_info[2].style.display = "none"
+    }
+
+    for (let i = 0; i < info.length; i++) {
+        if (i == index) info[i].style.display = "block"
+        else info[i].style.display = "none"
     }
 }
 

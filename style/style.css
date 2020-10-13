@@ -78,6 +78,7 @@ audio {
   width: 40%;
   bottom: 1%;
   position: absolute;
+  outline: none;
 }
 
 audio::-webkit-media-controls-panel {
@@ -162,6 +163,14 @@ ul, li, ol {
   list-style-type: none;
 }
 
+img {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 section {
   height: 100vh;
   display: -webkit-box;
@@ -185,10 +194,6 @@ section .pda_empty img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 section .pda_empty .main {
@@ -250,7 +255,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_
           justify-content: center;
   font-size: 1.25vw;
   font-weight: 500;
-  color: #d2d2d2;
+  color: #bbbbbb;
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_title .tasks_left_title_image {
@@ -338,10 +343,6 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .task_title img,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .task_title img {
   width: 29%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .task_title .task_title_text,
@@ -363,7 +364,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 0.94vw;
-  color: #d2d2d2;
+  color: #bbbbbb;
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_active #tasks_left_menu_active_list ol .task_title .task_title_text p,
@@ -549,10 +550,10 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .mark::after,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .mark::after {
   content: "";
-  height: 145%;
-  width: 10%;
-  right: 7.4%;
-  margin-top: -1.7%;
+  height: 130%;
+  width: 11%;
+  right: 7%;
+  margin-top: -1.55%;
   position: absolute;
   background: center/contain no-repeat url(../image/tasks/mark.gif);
 }
@@ -597,7 +598,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_li
 }
 
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu #tasks_left_menu_list li:hover {
-  color: #d2d2d2;
+  color: #bbbbbb;
 }
 
 section .pda_empty .main .tasks .tasks_right {
@@ -693,7 +694,7 @@ section .pda_empty .main .tasks .tasks_right .tasks_right_menu .minus_3:hover {
 section .pda_empty .main .tasks .tasks_right .tasks_right_menu .tasks_right_menu_info_title {
   padding: 0.9% 0 0 3.7%;
   font-size: 0.76vw;
-  color: #d2d2d2;
+  color: #bbbbbb;
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_map {
@@ -733,11 +734,22 @@ section .pda_empty .main .tasks .tasks_right .tasks_right_map::-webkit-scrollbar
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_info {
   height: 94.5%;
-  margin: 1.2% 0 0 0.5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: 1.2% 0 0 0;
+  padding: 9% 7.8% 0 3.5%;
+  text-align: center;
   overflow-y: scroll;
+}
+
+section .pda_empty .main .tasks .tasks_right .tasks_right_info li img {
+  width: auto;
+  max-width: 105%;
+}
+
+section .pda_empty .main .tasks .tasks_right .tasks_right_info li .tasks_right_info_text {
+  margin-right: -5%;
+  text-align: left;
+  font-size: 0.94vw;
+  color: #bbbbbb;
 }
 
 section .pda_empty .main .main_menu {
@@ -774,7 +786,7 @@ section .pda_empty .main .main_menu #main_menu_list li {
 }
 
 section .pda_empty .main .main_menu #main_menu_list li:hover {
-  color: #d2d2d2;
+  color: #bbbbbb;
 }
 
 section .pda_empty .main .main_menu #main_menu_list li::before {
@@ -809,6 +821,6 @@ section .pda_empty .main .main_menu time {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.94vw;
-  color: #d2d2d2;
+  color: #bbbbbb;
 }
 /*# sourceMappingURL=style.css.map */

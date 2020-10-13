@@ -1,4 +1,4 @@
-$color_white: #d2d2d2;
+$color_white: #bbbbbb;
 $color_gray: #646464;
 $color_violet: #7d7d8c;
 $color_orange: #e6a000;
@@ -137,6 +137,7 @@ audio {
     width: 40%;
     bottom: 1%;
     position: absolute;
+    outline: none;
 
     &::-webkit-media-controls-panel {background: #393c48;}
 }
@@ -178,8 +179,11 @@ body, p, ul, li, ol {
     padding: 0;
 }
 
-ul, li, ol {
-    list-style-type: none;
+ul, li, ol {list-style-type: none;}
+
+img {
+    pointer-events: none;
+    user-select: none;
 }
 
 section {
@@ -196,7 +200,6 @@ section {
         img {
             width: 100%;
             object-fit: contain;
-            user-select: none;
         }
 
         .main {
@@ -274,10 +277,7 @@ section {
                                         margin-bottom: 2.8%;
                                         display: flex;
 
-                                        img {
-                                            width: 29%;
-                                            user-select: none;
-                                        }
+                                        img {width: 29%;}
 
                                         .task_title_text {
                                             width: 61%;
@@ -348,10 +348,10 @@ section {
 
                                     .mark::after {
                                         content: "";
-                                        height: 145%;
-                                        width: 10%;
-                                        right: 7.4%;
-                                        margin-top: -1.7%;
+                                        height: 130%;
+                                        width: 11%;
+                                        right: 7%;
+                                        margin-top: -1.55%;
                                         position: absolute;
                                         background: center/contain no-repeat url(../image/tasks/mark.gif);
                                     }
@@ -506,9 +506,24 @@ section {
 
                     .tasks_right_info {
                         height: 94.5%;
-                        margin: 1.2% 0 0 0.5%;
-                        display: flex;
+                        margin: 1.2% 0 0 0;
+                        padding: 9% 7.8% 0 3.5%;
+                        text-align: center;
                         overflow-y: scroll;
+                        
+                        li {
+                            img {
+                                width: auto;
+                                max-width: 105%;
+                            }
+    
+                            .tasks_right_info_text {
+                                margin-right: -5%;
+                                text-align: left;
+                                font-size: $size_2;
+                                color: $color_white;
+                            }
+                        }
                     }
                 }
             }
