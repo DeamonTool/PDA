@@ -1,7 +1,6 @@
 ::-webkit-scrollbar {
   height: 1.4vw;
   width: 1.5vw;
-  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -704,16 +703,18 @@ section .pda_empty .main .tasks .tasks_right .tasks_right_map {
   display: -ms-flexbox;
   display: flex;
   overflow: scroll;
+  -webkit-mask-image: url(../image/tasks/map_mask.svg);
+          mask-image: url(../image/tasks/map_mask.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
 }
 
-section .pda_empty .main .tasks .tasks_right .tasks_right_map li {
-  width: auto;
-  margin: 5% 5% 7% 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.25vw;
-  color: #009600;
+section .pda_empty .main .tasks .tasks_right .tasks_right_map img {
+  width: 100%;
+}
+
+section .pda_empty .main .tasks .tasks_right .tasks_right_map::-webkit-scrollbar {
+  background-color: #202225;
 }
 
 section .pda_empty .main .tasks .tasks_right .tasks_right_map::-webkit-scrollbar-button:vertical:end:increment {
