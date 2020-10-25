@@ -72,18 +72,6 @@
   background-color: #73758b;
 }
 
-audio {
-  height: 3.5%;
-  width: 40%;
-  bottom: 1%;
-  position: absolute;
-  outline: none;
-}
-
-audio::-webkit-media-controls-panel {
-  background: #393c48;
-}
-
 @-webkit-keyframes cursor {
   0% {
     cursor: url(../image/cursor/1.png), auto;
@@ -549,7 +537,7 @@ section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_fa
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_completed_list ol .mark::after,
 section .pda_empty .main .tasks .tasks_left .tasks_left_menu .tasks_left_menu_failed #tasks_left_menu_failed_list ol .mark::after {
   content: "";
-  height: 130%;
+  height: 123%;
   width: 11%;
   right: 7%;
   margin-top: -1.55%;
@@ -823,5 +811,29 @@ section .pda_empty .main .main_menu time {
           align-items: center;
   font-size: 0.94vw;
   color: #bbbbbb;
+}
+
+section .pda_empty .tooltip {
+  padding: 0.2% 1.2% 0.5% 0.8%;
+  display: none;
+  position: absolute;
+  -webkit-clip-path: polygon(100% 0, 100% 60%, calc(100% - 0.6vw) 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 60%, calc(100% - 0.6vw) 100%, 0 100%, 0 0);
+  background: linear-gradient(0deg, #61646980 5%, transparent 15%, transparent 85%, #61646980 95%), linear-gradient(90deg, #61646980 0.1vw, transparent 0.2vw, transparent calc(100% - 0.2vw), #61646980 calc(100% - 0.1vw)), linear-gradient(130deg, #25333b80 calc(100% - 0.6vw), #61646980 calc(100% - 0.55vw));
+  white-space: nowrap;
+  font-size: 0.94vw;
+  color: #bbbbbb;
+}
+
+section audio {
+  height: 3.5%;
+  width: 40%;
+  bottom: 1%;
+  position: absolute;
+  outline: none;
+}
+
+section audio::-webkit-media-controls-panel {
+  background: #393c48;
 }
 /*# sourceMappingURL=style.css.map */

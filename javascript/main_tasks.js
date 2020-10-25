@@ -1,3 +1,5 @@
+"use strict"
+
 //  Переключение меню Активные/Выполненные/Проваленные
 
 function tasksLeftMenuSwitch(index) {
