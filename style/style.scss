@@ -175,18 +175,18 @@ img {
     user-select: none;
 }
 
-section {
+section {  // For convenience, write properties in order, for example at the beginning you always write everything related to position, then everything related to flex, then height
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: center/cover no-repeat url(../image/background.jpg);
     
-    .pda_empty {
+    .pda_empty { // maybe use vw\ vh  check difference between vw and % https://stackoverflow.com/questions/31039979/css-units-what-is-the-difference-between-vh-vw-and
         width: 85%;
         position: relative;
 
-        img {
+        img {  // due to the fact that the property is at the beginning, it will affect all subsequent img . move it down or make it a class?
             width: 100%;
             object-fit: contain;
         }
@@ -194,7 +194,7 @@ section {
         .main {
             height: 100%;
             width: 100%;
-            padding: 7.3% 14.4% 8.5% 10.6%;
+            padding: 7.3% 14.4% 8.5% 10.6%; // hardcode
             top: 0;
             left: 0;
             display: flex;
@@ -203,14 +203,14 @@ section {
 
             .tasks {
                 height: 94%;
-                margin-top: -0.2%;
+                margin-top: -0.2%; // dont write minus value, without looks better
                 padding-bottom: 1%;
                 display: flex;
                 background: top/contain no-repeat url(../image/tasks/tasks.png);
 
                 .tasks_left {
                     width: 47%;
-                    margin-top: 1.9%;
+                    margin-top: 1.9%; // slojna 
                     padding: 0 3% 0 1.4%;
                     display: flex;
                     flex-direction: column;
@@ -220,7 +220,7 @@ section {
                         display: flex;
                         justify-content: space-between;
 
-                        .tasks_left_title_text {
+                        .tasks_left_title_text { //using flex properties without display: flex
                             padding: 1% 0 0 4.4%;
                             align-items: center;
                             justify-content: center;
@@ -241,14 +241,14 @@ section {
                         display: flex;
                         position: relative;
 
-                        .tasks_left_menu_active,
+                        .tasks_left_menu_active,  // if these clases have same properties why no use one generic class?
                         .tasks_left_menu_completed,
                         .tasks_left_menu_failed {
                             width: 100%;
                             margin: 1.5% 0 0.3% 0;
                             overflow-y: scroll;
 
-                            #tasks_left_menu_active_list,
+                            #tasks_left_menu_active_list, // same issue
                             #tasks_left_menu_completed_list,
                             #tasks_left_menu_failed_list {
                                 height: 91%;
@@ -270,7 +270,7 @@ section {
 
                                         .task_title_text {
                                             width: 61%;
-                                            padding: 0.4% 0 0 0.6%;
+                                            padding: 0.4% 0 0 0.6%; // without same frame
                                             display: flex;
                                             flex-direction: column;
                                             font-size: $size_2;
@@ -285,8 +285,8 @@ section {
 
                                         .task_title_info {
                                             width: 9%;
-                                            margin-bottom: 7.5%;
-                                            background: right/80% no-repeat url(../image/tasks/info_1.png);
+                                            margin-bottom: 7.5%; //hardcode use flex propeties to parent
+                                            background: right/80% no-repeat url(../image/tasks/info_1.png); //better use svg for this task
 
                                             &:hover {background: right/80% no-repeat url(../image/tasks/info_2.png);}
                                         }
@@ -335,7 +335,7 @@ section {
                                         &:hover {background: right/90% no-repeat url(../image/tasks/target_2.png);}
                                     }
 
-                                    .mark::after {
+                                    .mark::after { // icon and text not centred, hardcode 
                                         content: "";
                                         height: 123%;
                                         width: 11%;
@@ -359,7 +359,7 @@ section {
                             display: flex;
                             align-items: flex-end;
                             justify-content: space-between;
-                            position: absolute;
+                            position: absolute; //unnecessary position, possible do with height and flex properties
                             background:
                                 linear-gradient(0deg, #111313 84%, transparent 0),
                                 linear-gradient(0deg, #222424 87%, transparent 0);
@@ -370,7 +370,7 @@ section {
                                 font-size: $size_2;
                                 color: $color_gray;
         
-                                &:hover {color: $color_white;}
+                                &:hover {color: $color_white;} // for smooth hover try to use transition https://developer.mozilla.org/ru/docs/Web/CSS/transition
                             }
                         }
                     }
@@ -550,7 +550,7 @@ section {
                             color: $color_gray;
                         }
 
-                        &:not(:first-child) {margin-left: -0.1%;}
+                        &:not(:first-child) {margin-left: -0.1%;} // hardcode
                     }
 
                     .notice::before {background: center/contain no-repeat url(../image/main_menu/list_2.png);}

@@ -1,9 +1,9 @@
-"use strict"
+"use strict" //not neccessary 
 
 //  Переключение меню Активные/Выполненные/Проваленные
 
 function tasksLeftMenuSwitch(index) {
-    let list_menu = document.getElementById("tasks_left_menu_list").getElementsByTagName("li")
+    let list_menu = document.getElementById("tasks_left_menu_list").getElementsByTagName("li") // every call, every override, remove from func
     let list = [
         document.getElementsByClassName("tasks_left_menu_active")[0],
         document.getElementsByClassName("tasks_left_menu_completed")[0],
@@ -26,7 +26,7 @@ function tasksLeftMenuSwitch(index) {
 //  Информация о задании
 
 function tasksLeftMenuInfo(index) {
-    let info_title = document.getElementsByClassName("task_title_info")
+    let info_title = document.getElementsByClassName("task_title_info") // same issue
     let info = document.getElementsByClassName("tasks_right_info")[0].getElementsByTagName("li")
     let target = document.getElementsByClassName("target")
     let menu_info = [
@@ -43,7 +43,7 @@ function tasksLeftMenuInfo(index) {
 
     for (let i = 0; i < info_title.length; i++) info_title[i].classList.toggle("info_3")
 
-    if (info_title[0].classList.length == 2) {
+    if (info_title[0].classList.length == 2) { // pizdec, po drugomy nelzya?
         for (let i = 0; i < target.length; i++) target[i].style.display = "none"
 
         for (let i = 0; i < 4; i++) menu[i].style.display = "none"

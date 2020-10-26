@@ -75,7 +75,9 @@ function tooltipName(element) {
     }
 }
 
-section.addEventListener("mousemove", () => {tooltip.style.display = "none"})
+section.addEventListener("mousemove", () => { setTimeout(() => { // not so strong display, you need to give user a times
+    tooltip.style.display = "none"
+}, 200);})
 document.getElementsByClassName("tasks_right_menu_full")[0].addEventListener("mousemove", tooltipData)
 document.getElementsByClassName("tasks_right_menu_player")[0].addEventListener("mousemove", tooltipData)
 document.getElementsByClassName("tasks_right_menu_plus")[0].addEventListener("mousemove", tooltipData)
