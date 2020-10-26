@@ -75,19 +75,19 @@ function tooltipName(element) {
     }
 }
 
-section.addEventListener("mousemove", () => { setTimeout(() => { // not so strong display, you need to give user a times
+section.addEventListener("mousemove", () => { setTimeout(() => { // not so strong display, you need to give user a times 
     tooltip.style.display = "none"
 }, 200);})
-document.getElementsByClassName("tasks_right_menu_full")[0].addEventListener("mousemove", tooltipData)
-document.getElementsByClassName("tasks_right_menu_player")[0].addEventListener("mousemove", tooltipData)
-document.getElementsByClassName("tasks_right_menu_plus")[0].addEventListener("mousemove", tooltipData)
-document.getElementsByClassName("tasks_right_menu_minus")[0].addEventListener("mousemove", tooltipData)
+document.getElementsByClassName("tasks_right_menu_full")[0].addEventListener("mouseover", tooltipData) //https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave
+document.getElementsByClassName("tasks_right_menu_player")[0].addEventListener("mouseover", tooltipData)
+document.getElementsByClassName("tasks_right_menu_plus")[0].addEventListener("mouseover", tooltipData)
+document.getElementsByClassName("tasks_right_menu_minus")[0].addEventListener("mouseover", tooltipData)
 let main_menu_list = document.getElementById("main_menu_list").getElementsByTagName("li")
 let tasks_left_menu_list = document.getElementById("tasks_left_menu_list").getElementsByTagName("li")
 let task_title_info = document.getElementsByClassName("task_title_info")
 let target = document.getElementsByClassName("target")
 
-for (let i = 0; i < main_menu_list.length; i++) main_menu_list[i].addEventListener("mousemove", tooltipData)
-for (let i = 0; i < tasks_left_menu_list.length; i++) tasks_left_menu_list[i].addEventListener("mousemove", tooltipData)
-for (let i = 0; i < task_title_info.length; i++) task_title_info[i].addEventListener("mousemove", tooltipData)
-for (let i = 0; i < target.length; i++) target[i].addEventListener("mousemove", tooltipData)
+for (let i = 0; i < main_menu_list.length; i++) main_menu_list[i].addEventListener("mouseover", tooltipData)
+for (let i = 0; i < tasks_left_menu_list.length; i++) tasks_left_menu_list[i].addEventListener("mouseover", tooltipData)
+for (let i = 0; i < task_title_info.length; i++) task_title_info[i].addEventListener("mouseover", tooltipData)
+for (let i = 0; i < target.length; i++) target[i].addEventListener("mouseover", tooltipData)
