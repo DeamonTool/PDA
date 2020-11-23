@@ -2,8 +2,9 @@
 
 //  Переключение меню Активные/Выполненные/Проваленные
 
+let list_menu = document.getElementById("tasks_left_menu_list").getElementsByTagName("li") // every call, every override, remove from func
+
 function tasksLeftMenuSwitch(index) {
-    let list_menu = document.getElementById("tasks_left_menu_list").getElementsByTagName("li") // every call, every override, remove from func
     let list = [
         document.getElementsByClassName("tasks_left_menu_active")[0],
         document.getElementsByClassName("tasks_left_menu_completed")[0],
@@ -25,8 +26,9 @@ function tasksLeftMenuSwitch(index) {
 
 //  Информация о задании
 
+let info_title = document.getElementsByClassName("task_title_info") // same issue
+
 function tasksLeftMenuInfo(index) {
-    let info_title = document.getElementsByClassName("task_title_info") // same issue
     let info = document.getElementsByClassName("tasks_right_info")[0].getElementsByTagName("li")
     let target = document.getElementsByClassName("target")
     let menu_info = [

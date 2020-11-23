@@ -1,5 +1,3 @@
-"use strict"
-
 //  Дата и время PDA
 
 let formatTrue = value => { return value < 10 ? value = '0' + value : value }
@@ -17,9 +15,9 @@ setInterval(() => document.getElementsByTagName("time")[0].innerHTML = dateTime(
 
 //  Уведомления о новой информации
 
-function mainMenuSwitch(index) {
-    let list = document.getElementById("main_menu_list").getElementsByTagName("li")
+let list = document.getElementById("main_menu_list").getElementsByTagName("li")
 
+function mainMenuSwitch(index) {
     for (let i = 0; i < 7; i++) i == index ? list[i].style.color = "#e6a000" : list[i].style.color = ""
 
     if (list[index].classList.length) list[index].classList.toggle("notice")
@@ -33,7 +31,7 @@ document.getElementsByTagName("audio")[0].volume = 0.01
 
 let tooltip = document.getElementsByClassName("tooltip")[0]
 let section = document.getElementsByTagName("section")[0]
-let main = document.getElementsByClassName("main")[0]
+let main = document.getElementsByTagName("main")[0]
 let tooltip_database = {
     "Задачи" : "Показать информацию по квестам",
     "План" : "Показать карту Зоны",
@@ -75,19 +73,19 @@ function tooltipName(element) {
     }
 }
 
-section.addEventListener("mousemove", () => { setTimeout(() => { // not so strong display, you need to give user a times 
+section.addEventListener("mousemove", () => { setTimeout(() => {
     tooltip.style.display = "none"
 }, 200);})
-document.getElementsByClassName("tasks_right_menu_full")[0].addEventListener("mouseover", tooltipData) //https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave
-document.getElementsByClassName("tasks_right_menu_player")[0].addEventListener("mouseover", tooltipData)
-document.getElementsByClassName("tasks_right_menu_plus")[0].addEventListener("mouseover", tooltipData)
-document.getElementsByClassName("tasks_right_menu_minus")[0].addEventListener("mouseover", tooltipData)
+document.getElementsByClassName("tasks_right_menu_full")[0].addEventListener("mousemove", tooltipData)
+document.getElementsByClassName("tasks_right_menu_player")[0].addEventListener("mousemove", tooltipData)
+document.getElementsByClassName("tasks_right_menu_plus")[0].addEventListener("mousemove", tooltipData)
+document.getElementsByClassName("tasks_right_menu_minus")[0].addEventListener("mousemove", tooltipData)
 let main_menu_list = document.getElementById("main_menu_list").getElementsByTagName("li")
 let tasks_left_menu_list = document.getElementById("tasks_left_menu_list").getElementsByTagName("li")
 let task_title_info = document.getElementsByClassName("task_title_info")
 let target = document.getElementsByClassName("target")
 
-for (let i = 0; i < main_menu_list.length; i++) main_menu_list[i].addEventListener("mouseover", tooltipData)
-for (let i = 0; i < tasks_left_menu_list.length; i++) tasks_left_menu_list[i].addEventListener("mouseover", tooltipData)
-for (let i = 0; i < task_title_info.length; i++) task_title_info[i].addEventListener("mouseover", tooltipData)
-for (let i = 0; i < target.length; i++) target[i].addEventListener("mouseover", tooltipData)
+for (let i = 0; i < main_menu_list.length; i++) main_menu_list[i].addEventListener("mousemove", tooltipData)
+for (let i = 0; i < tasks_left_menu_list.length; i++) tasks_left_menu_list[i].addEventListener("mousemove", tooltipData)
+for (let i = 0; i < task_title_info.length; i++) task_title_info[i].addEventListener("mousemove", tooltipData)
+for (let i = 0; i < target.length; i++) target[i].addEventListener("mousemove", tooltipData)
